@@ -1,2 +1,2 @@
 name=Fairy's Overhaul
-description=Version 0.9 Prerelease 2 - Combat Overhaul! - Sprites are not mine! Check out the game Switchcars!
+description=Version 0.8.5 Prerelease 1 - Unit Rework! - Sprites are not mine! Check out the game Switchcars!
