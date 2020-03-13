@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<resources>
+	<set path = "mods/fai_overhaul/images/backgrounds/" />
+	<atlas>
+		<image file="background+0.png" />
+		<image file="background+1.png" />
+		<image file="background+2.png" />
+	</atlas>
+</resources>
