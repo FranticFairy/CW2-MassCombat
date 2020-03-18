@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/units/" />
+	<set path = "mods/MassCombat/images/units/" />
 	<atlas>
 		<image file="FAI_AEWC+mask.png" />
 		<image file="FAI_AEWC.png" />

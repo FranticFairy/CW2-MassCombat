@@ -6,16 +6,18 @@ var Constructor = function () {
         return 0;
     };
     this.damageTable = [
-        ["FAI_BARGE", 55],
-
-        ["FAI_BATTLESHIP", 75],
-        ["FAI_CARRIER", 75],
-        ["FAI_CRUISER", 65],
-        ["FAI_DESTROYER", 55],
-        ["FAI_SUBMARINE", 65],
-        ["FAI_COASTPATROL", 70],
-        ["FAI_TRANSSHIP", 85],
-        ["FAI_OGRE", 5]
+        ["FAI_OTH_OGRE",5],
+        ["FAI_SHIP_BATTLESHIP",75],
+        ["FAI_SHIP_CARRIER",75],
+        ["FAI_SHIP_CRUISER",65],
+        ["FAI_SHIP_DESTROYER",55],
+        ["FAI_SHIP_FRIGATE",60],
+        ["FAI_SHIP_INVASION",90],
+        ["FAI_SHIP_LCA",105],
+        ["FAI_SHIP_LIBERTY",100],
+        ["FAI_SHIP_SUBMARINE",65],
+        ["FAI_SHIP_SUPPLY",85],
+        ["FAI_SHIP_TRANS",85],      
     ];
 
     this.getBaseDamage = function (unit) {

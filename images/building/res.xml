@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/building/" />
+	<set path = "mods/MassCombat/images/building/" />
 	<atlas>
 		<!-- factory -->
 		<image file="factory.png" cols = "2" />

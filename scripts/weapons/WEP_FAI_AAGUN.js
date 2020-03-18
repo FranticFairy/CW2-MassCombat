@@ -6,18 +6,24 @@ var Constructor = function () {
         return 0;
     };
     this.damageTable = [
-        ["FAI_GUNSHIP", 85],
-        ["FAI_HELIINF", 95],
-        ["FAI_HELIVHC", 95],
-
-        ["FAI_AEWC", 65],
-        ["FAI_BOMBER", 65],
-        ["FAI_FIGHTER", 75],
-        ["FAI_SEAPLANE", 85],
-        ["FAI_STEALTHBOMBER", 55],
-        ["FAI_STEALTHFIGHTER", 55],
-        ["FAI_TANKBUSTER", 75],
-        ["FAI_TRANSPLANE", 65],
+        ["FAI_CASH_PLANE",65],
+        ["FAI_CASH_SHIP",65],
+        ["FAI_HELI_ATTACK",85],
+        ["FAI_HELI_GUNSHIP",75],
+        ["FAI_HELI_INF",95],
+        ["FAI_HELI_SCOUT",95],
+        ["FAI_HELI_VHC",95],
+        ["FAI_PLANE_AEWC",65],
+        ["FAI_PLANE_BOMBER",65],
+        ["FAI_PLANE_FIGHTER",75],
+        ["FAI_PLANE_FLYBOAT",70],
+        ["FAI_PLANE_GLIDER",85],
+        ["FAI_PLANE_NAVJET",80],
+        ["FAI_PLANE_SEAPLANE",90],
+        ["FAI_PLANE_STEALTHBOMBER",55],
+        ["FAI_PLANE_STEALTHFIGHTER",65],
+        ["FAI_PLANE_TANKBUSTER",80],
+        ["FAI_PLANE_TRANS",65],
     ];
 
     this.getBaseDamage = function (unit) {

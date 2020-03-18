@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/game/" />
+	<set path = "mods/MassCombat/images/game/" />
 	<atlas>	
 		<!-- battle sprite -->
 		<image file="battlesprites/battle_back.png" />

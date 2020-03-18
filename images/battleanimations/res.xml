@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/battleanimations/" />
+	<set path = "mods/MassCombat/images/battleanimations/" />
 	<atlas>
 		
 		<image file="FAI_AEWC+mask.png" />

@@ -6,8 +6,8 @@ var Constructor = function () {
         return 0;
     };
     this.damageTable = [
-        ["FAI_SUBMARINE", 75],
-        ["FAI_OGRE", 3]
+        ["FAI_SHIP_SUBMARINE",75],
+        ["FAI_OTH_OGRE",3],
     ];
 
     this.getBaseDamage = function (unit) {

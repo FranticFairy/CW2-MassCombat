@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/terrain/" />
+	<set path = "mods/MassCombat/images/terrain/" />
 	<atlas>
 		<image file="beach+E+S+land+N+W.png" />		
 		<image file="beach+E+W+land+N+S.png" />		
