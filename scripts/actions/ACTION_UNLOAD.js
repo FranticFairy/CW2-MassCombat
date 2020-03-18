@@ -29,7 +29,7 @@ var Constructor = function()
             }
         }
 
-        if (unit.getUnitID() === "FAI_TRANSPLANE")
+        if (unit.getUnitID() === "FAI_PLANE_TRANS")
         {
             if ((transportTerrain.getID() !== "AIRPORT") &&
                 (transportTerrain.getID() !== "TEMPORARY_AIRPORT"))

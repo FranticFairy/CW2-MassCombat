@@ -113,7 +113,7 @@ var Constructor = function()
         var player = map.getCurrentPlayer();
         var unit = map.spawnUnit(ACTION_PLACE_WATERMINE.postAnimationMinePosX,
                                  ACTION_PLACE_WATERMINE.postAnimationMinePosY,
-                                 "FAI_SEAMINE", player);
+                                 "FAI_OTH_SEAMINE", player);
         if (unit !== null)
         {
             // pay for the unit

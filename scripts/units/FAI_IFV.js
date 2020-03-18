@@ -4,7 +4,7 @@ var Constructor = function()
     {
         unit.setMinRange(1);
         unit.setMaxRange(1);
-        unit.setWeapon2ID("WEP_FAI_AUTOCANNON");
+        unit.setWeapon2ID("WEP_FAI_AUTOCAN");
 
         unit.setAmmo2(10);
         unit.setMaxAmmo2(10);
@@ -61,7 +61,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_FOOTSOLDIER"];
+        return ["FAI_INF_RIFLE"];
     };
     this.getUnitType = function()
     {

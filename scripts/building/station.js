@@ -33,7 +33,7 @@ var Constructor = function()
 
     this.getConstructionList = function(building)
     {
-        return ["FAI_ARMORTRAIN","FAI_RAILWAYGUN","FAI_FASTTRAIN","FAI_HEAVYTRAIN","FAI_CASH_TRAIN","FAI_SUPPLYTRAIN"];
+        return ["FAI_TRAIN_ARMOR","FAI_TRAIN_GUN","FAI_TRAIN_ELEC","FAI_TRAIN_DIESEL","FAI_CASH_TRAIN","FAI_TRAIN_SUPPLY"];
     };
     this.getTerrainAnimationForeground = function(unit, terrain)
     {

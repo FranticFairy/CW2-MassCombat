@@ -37,7 +37,7 @@ var Constructor = function ()
                 }
 
                 
-                if (targetUnit.getUnitID() === "FAI_TRANSPLANE")
+                if (targetUnit.getUnitID() === "FAI_PLANE_TRANS")
                 {
                     if ((transportTerrain.getID() === "AIRPORT") ||
                         (transportTerrain.getID() === "TEMPORARY_AIRPORT"))

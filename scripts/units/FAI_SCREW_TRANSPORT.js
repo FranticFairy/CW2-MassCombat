@@ -53,7 +53,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_FIELDARTY","FAI_FIELDAT"];
+        return ["FAI_GUN_ARTY","FAI_GUN_AT"];
     };
     this.getDescription = function()
     {

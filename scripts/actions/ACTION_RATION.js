@@ -78,11 +78,11 @@ var Constructor = function () {
 
     this.giveRation = function (unit) {
         var supplier = "*";
-        if (unit.getUnitID() === "FAI_SUPPLYTRUCK") {
+        if (unit.getUnitID() === "FAI_UTIL_SUPPLY") {
             supplier = "land";
-        } else if (unit.getUnitID() === "FAI_SUPPLYTRAIN") {
+        } else if (unit.getUnitID() === "FAI_TRAIN_SUPPLY") {
             supplier = "land8";
-        } else if (unit.getUnitID() === "FAI_SUPPLYSHIP") {
+        } else if (unit.getUnitID() === "FAI_SHIP_SUPPLY") {
             supplier = "sea";
         }
         var x = unit.getX() + 1;

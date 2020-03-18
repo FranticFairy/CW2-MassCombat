@@ -29,6 +29,10 @@ var Constructor = function()
         // returns a string id list of the actions this unit can perform
         return "ACTION_UNLOAD_MONEY,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
+    this.getUnitDamageID = function()
+    {
+    return "FAI_TRANS_TRUCK"; // unit id that will be used to calculate the damage we take
+    };
     this.getMovementType = function()
     {
         return "MOVE_FAI_LIGHT_WHEEL";

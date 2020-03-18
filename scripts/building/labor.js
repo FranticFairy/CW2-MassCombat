@@ -27,7 +27,7 @@ var Constructor = function()
 
     this.getConstructionList = function(building)
     {
-        return ["FAI_HOVERTANK","FAI_HOVERCRAFT","FAI_HVYHOVER","FAI_MECH","FAI_OGRE"];
+        return ["FAI_TANK_HOVER","FAI_HOVERCRAFT","FAI_HOVER_HEAVY","FAI_TANK_MECH","FAI_OTH_OGRE"];
     };
 
     this.getDescription = function()
