@@ -24,7 +24,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Barge")
+        return qsTr("LCA")
     };
     this.canMoveAndFire = function()
     {

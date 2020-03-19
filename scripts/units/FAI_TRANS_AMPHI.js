@@ -45,7 +45,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Amphibious Infantry")
+        return qsTr("Amphibious Trucks")
     };
     this.getLoadingPlace = function()
     {

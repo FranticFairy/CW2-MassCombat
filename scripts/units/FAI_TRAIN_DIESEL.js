@@ -34,7 +34,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Heavy Train")
+        return qsTr("Diesel Train")
     };
     this.canMoveAndFire = function()
     {

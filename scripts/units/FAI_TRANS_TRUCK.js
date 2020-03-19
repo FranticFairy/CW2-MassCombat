@@ -45,7 +45,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Motorized Infantry")
+        return qsTr("Transport Trucks")
     };
     this.canMoveAndFire = function()
     {

@@ -30,6 +30,8 @@
 		<image file="FAI_IFV.png" />
 		<image file="FAI_IFV_AMPHI+mask.png" />
 		<image file="FAI_IFV_AMPHI.png" />
+		<image file="FAI_IFV_AMPHI_WATER+mask.png" />
+		<image file="FAI_IFV_AMPHI_WATER.png" />
 		<image file="FAI_IFV_HEAVY+mask.png" />
 		<image file="FAI_IFV_HEAVY.png" />
 		<image file="FAI_PLANE_FIGHTER+mask.png" />
@@ -128,6 +130,8 @@
 		<image file="FAI_TRANS_TRUCK.png" />
 		<image file="FAI_TRANS_AMPHI+mask.png" />
 		<image file="FAI_TRANS_AMPHI.png" />
+		<image file="FAI_TRANS_AMPHI_WATER+mask.png" />
+		<image file="FAI_TRANS_AMPHI_WATER.png" />
 		<image file="FAI_UTIL_ARV+mask.png" />
 		<image file="FAI_UTIL_ARV.png" />
 		<image file="FAI_UTIL_AVLB+mask.png" />

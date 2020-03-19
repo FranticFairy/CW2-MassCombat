@@ -48,7 +48,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("Old-Fashioned but still useful, Anti-Tank Guns are good defensive units for countering hostile armour.");
+        return qsTr("These guns are a pain for enemy armor to deal with, as they often take them off-guard and shoot first. Vulnerable to infantry.");
     };
     this.getUnitType = function()
     {

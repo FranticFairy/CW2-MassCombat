@@ -35,6 +35,8 @@ var Constructor = function () {
         if (map.onMap(x, y)) {
             var target = map.getTerrain(x, y).getUnit();
             if (target !== null) {
+                //1 == Land
+                //16 == Sea
                 return target.getUnitType();
             }
         }
@@ -90,7 +92,7 @@ var Constructor = function () {
         var animation = null;
         if (ACTION_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 0) {
+                if (ACTION_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -99,7 +101,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 2) {
+                if (ACTION_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -119,7 +121,7 @@ var Constructor = function () {
         x = unit.getX() - 1;
         if (ACTION_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 0) {
+                if (ACTION_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -128,7 +130,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 2) {
+                if (ACTION_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -148,7 +150,7 @@ var Constructor = function () {
         y = unit.getY() + 1;
         if (ACTION_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 0) {
+                if (ACTION_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -157,7 +159,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 2) {
+                if (ACTION_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -176,7 +178,7 @@ var Constructor = function () {
         y = unit.getY() - 1;
         if (ACTION_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 0) {
+                if (ACTION_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -185,7 +187,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 2) {
+                if (ACTION_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -205,7 +207,7 @@ var Constructor = function () {
         if(supplier == "land8") {
             x = unit.getX() + 1;
             y = unit.getY() + 1;
-            if (ACTION_RATION.checkType(x, y) == 0 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -214,7 +216,7 @@ var Constructor = function () {
             
             x = unit.getX() - 1;
             y = unit.getY() + 1;
-            if (ACTION_RATION.checkType(x, y) == 0 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -223,7 +225,7 @@ var Constructor = function () {
             
             x = unit.getX() - 1;
             y = unit.getY() - 1;
-            if (ACTION_RATION.checkType(x, y) == 0 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -232,7 +234,7 @@ var Constructor = function () {
             
             x = unit.getX() + 1;
             y = unit.getY() - 1;
-            if (ACTION_RATION.checkType(x, y) == 0 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);

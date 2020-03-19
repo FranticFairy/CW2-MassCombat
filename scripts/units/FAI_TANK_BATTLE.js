@@ -45,7 +45,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Tank")
+        return qsTr("Battle Tank")
     };
     this.canMoveAndFire = function()
     {

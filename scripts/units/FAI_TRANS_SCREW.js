@@ -41,7 +41,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("All-Terrain Infantry")
+        return qsTr("Screw Vehicles")
     };
     this.getActions = function()
     {

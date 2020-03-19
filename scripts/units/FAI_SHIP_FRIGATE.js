@@ -75,7 +75,7 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Coastal Patrol")
+        return qsTr("Frigate")
     };
     this.canMoveAndFire = function()
     {
@@ -83,7 +83,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("A cheap but weak ship mostly for protecting ports and laying seamines, Coast Patrol Ships are lightly-armed.");
+        return qsTr("The lightest warship around, Frigates' greatest strength lies in their ability to detect, disarm, and deploy seamines.");
     };
     this.getActions = function()
     {

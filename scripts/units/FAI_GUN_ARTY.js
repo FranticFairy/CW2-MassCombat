@@ -2,10 +2,10 @@ var Constructor = function()
 {
     this.init = function(unit)
     {
-        unit.setWeapon1ID("WEP_FAI_ARTY");
+        unit.setWeapon1ID("WEP_FAI_ARTY_HVY");
 
         unit.setMinRange(2);
-        unit.setMaxRange(3);
+        unit.setMaxRange(4);
         unit.setAmmo1(5);
         unit.setMaxAmmo1(5);
 
@@ -37,11 +37,11 @@ var Constructor = function()
     };
     this.getBaseCost = function()
     {
-        return 6000;
+        return 8000;
     };
     this.getName = function()
     {
-        return qsTr("Field Artillery")
+        return qsTr("Heavy Field Artillery")
     };
     this.canMoveAndFire = function()
     {
@@ -49,7 +49,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("Although static artillery is old, it's still useful. Cheaper than it's mobile cousins, these guns can still pack a good punch.");
+        return qsTr("The second-biggest land based conventional guns, these heavy weapons can hurt even warships, but are vulnerable to infantry attack.");
     };
     this.getUnitType = function()
     {
