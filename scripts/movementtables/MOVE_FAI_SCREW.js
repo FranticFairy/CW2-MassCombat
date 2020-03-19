@@ -19,7 +19,7 @@ var Constructor = function () {
         ["PLAINS_DESTROYED", 2],
         ["PLAINS_PLASMA", 2],
         ["RAILBRIDGE", 3],
-        ["RAILCROSS", 3],
+        ["RAILCROSS", 2],
         ["RAILWAY", 3],
         ["RIVER", 2],
         ["RUIN", 2],

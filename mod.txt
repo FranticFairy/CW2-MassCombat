@@ -1,2 +1,2 @@
-name=Fairy's Overhaul
+name=Mass Combat
 description=Version 0.8.5 Prerelease 1 - Unit Rework! - Sprites are not mine! Check out the game Switchcars!
