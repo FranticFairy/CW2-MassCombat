@@ -25,9 +25,9 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
         var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 2);
-        animation.loadSprite(unitID, false, 2);
-        animation.setSound("movetank.wav", -2);
+        animation.loadSprite(unitID + "+mask", true, 1);
+        animation.loadSprite(unitID, false, 1);
+        animation.setSound("ifv.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.getMovementType = function()

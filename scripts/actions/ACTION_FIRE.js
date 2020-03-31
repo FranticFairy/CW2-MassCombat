@@ -96,10 +96,10 @@ var Constructor = function()
     {
         var damage = -1;
         // only direct units can deal counter damage
-        if (defender.getMinRange() === 1 && defenderWeapon !== "")
+        if (defender.getMinRange() === 1 && defenderWeapon !== "" && defender.getUnitID() != "FAI_GUN_AT")
         {
             var health = defender.getHp() - takenDamage / 10.0;
-            if (defender.getFirstStrike(defender.getPosition(), attacker) || defendergetUnitID() === "FAI_GUN_AT")
+            if (defender.getFirstStrike(defender.getPosition(), attacker))
             {
                 health = defender.getHp();
             }
@@ -187,6 +187,15 @@ var Constructor = function()
             {
                 if (unit.isAttackable(defUnit))
                 {
+                    if(defUnit.getUnitID() === "FAI_GUN_AT" && unit.getUnitID() != "FAI_GUN_AT") {
+                        if (Math.abs(actionTargetField.x - x) + Math.abs(actionTargetField.y - y) === 1)
+                        {
+                            if (defUnit.hasAmmo1() && defUnit.getWeapon1ID() !== "")
+                            {
+                                defDamage = ACTION_FIRE.calcDefenderDamage(unit, actionTargetField, defUnit, defUnit.getWeapon1ID(), result.x + defenderTakenDamage, luckMode);
+                            }
+                        }
+                    }
                     if (unit.hasAmmo1() && unit.getWeapon1ID() !== "")
                     {
                         dmg1 = ACTION_FIRE.calcAttackerDamage(unit, unit.getWeapon1ID(), attackerTakenDamage, actionTargetField ,defUnit, luckMode);

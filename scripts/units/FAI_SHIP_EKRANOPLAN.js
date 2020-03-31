@@ -2,7 +2,7 @@ var Constructor = function()
 {
     this.init = function(unit)
     {
-        unit.setWeapon1ID("WEP_FAI_ASM");
+        unit.setWeapon1ID("WEP_FAI_MOSKIT");
 
         unit.setMinRange(1);
         unit.setMaxRange(2);

@@ -21,7 +21,7 @@ var Constructor = function()
         var unitID = unit.getUnitID().toLowerCase();
         animation.loadSprite(unitID + "+mask", true, 2);
         animation.loadSprite(unitID, false, 2);
-        animation.setSound("movetank.wav", -2);
+        animation.setSound("propplane.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.getMovementType = function()
@@ -51,16 +51,6 @@ var Constructor = function()
         var animation = GameAnimationFactory.createAnimation(x, y);
         animation.addSprite("explosion+air", -map.getImageSize() / 2, -map.getImageSize(), 0, 1.5);
         audio.playSound("explosion+air.wav");
-        return animation;
-    };
-    this.doWalkingAnimation = function(action)
-    {
-        var unit = action.getTargetUnit();
-        var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
-        var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 1.5);
-        animation.loadSprite(unitID, false, 1.5);
-        animation.setSound("moveair.wav", -2);
         return animation;
     };
     this.canMoveAndFire = function()

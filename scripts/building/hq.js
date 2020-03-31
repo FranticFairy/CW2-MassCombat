@@ -29,25 +29,8 @@ var Constructor = function()
     {
         var player = building.getOwner();
         // get army name
-        var armyName = "os";
-        if (player !== null)
-        {
-            armyName = player.getArmy().toLowerCase();
-        }
-        if (armyName === "bg")
-        {
-            armyName = "bh"
-        }
-        if ((armyName !== "os") &&
-            (armyName !== "yc") &&
-            (armyName !== "ge") &&
-            (armyName !== "bm") &&
-            (armyName !== "bh"))
-        {
-            armyName = "os";
-        }
-        animation.addBuildingSprite("hq+" + armyName + "+mask", startColor , capturedColor, true);
-        animation.addBuildingSprite("hq+" + armyName, startColor , capturedColor, false);
+        animation.addBuildingSprite("hq+mask", startColor , capturedColor, true);
+        animation.addBuildingSprite("hq", startColor , capturedColor, false);
     };
     this.getDefense = function()
     {

@@ -47,7 +47,7 @@ var Constructor = function()
         var unitID = unit.getUnitID().toLowerCase();
         animation.loadSprite(unitID + "+mask", true, 1.5);
         animation.loadSprite(unitID, false, 1.5);
-        animation.setSound("movecopter.wav", -2);
+        animation.setSound("helo.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.getMovementType = function()

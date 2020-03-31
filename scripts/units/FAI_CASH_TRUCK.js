@@ -19,19 +19,15 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
         var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 2);
-        animation.loadSprite(unitID, false, 2);
-        animation.setSound("movetank.wav", -2);
+        animation.loadSprite(unitID + "+mask", true, 1);
+        animation.loadSprite(unitID, false, 1);
+        animation.setSound("truck.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
         return "ACTION_UNLOAD_MONEY,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
-    };
-    this.getUnitDamageID = function()
-    {
-    return "FAI_TRANS_TRUCK"; // unit id that will be used to calculate the damage we take
     };
     this.getMovementType = function()
     {

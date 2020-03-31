@@ -21,7 +21,7 @@ var Constructor = function()
         var unitID = unit.getUnitID().toLowerCase();
         animation.loadSprite(unitID + "+mask", true, 2);
         animation.loadSprite(unitID, false, 2);
-        animation.setSound("movetank.wav", -2);
+        animation.setSound("train.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.getMovementType = function()

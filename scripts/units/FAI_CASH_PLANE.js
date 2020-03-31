@@ -14,16 +14,6 @@ var Constructor = function()
         unit.loadSprite("FAI_CASH_PLANE", false);
         unit.loadSprite("FAI_CASH_PLANE+mask", true);
     };
-    this.doWalkingAnimation = function(action)
-    {
-        var unit = action.getTargetUnit();
-        var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
-        var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 2);
-        animation.loadSprite(unitID, false, 2);
-        animation.setSound("movetank.wav", -2);
-        return animation;
-    };
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
@@ -63,9 +53,9 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
         var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 1.5);
-        animation.loadSprite(unitID, false, 1.5);
-        animation.setSound("moveair.wav", -2);
+        animation.loadSprite(unitID + "+mask", true, 1);
+        animation.loadSprite(unitID, false, 1);
+        animation.setSound("bigjet.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
     this.canMoveAndFire = function()
