@@ -128,6 +128,10 @@
 		<image file="FAI_SUPP_SPAA.png" />
 		<image file="FAI_SUPP_SPARTY+mask.png" />
 		<image file="FAI_SUPP_SPARTY.png" />
+		<image file="FAI_SUPP_SECURITY+mask.png" />
+		<image file="FAI_SUPP_SECURITY.png" />
+		<image file="FAI_SUPP_GUERILLA+mask.png" />
+		<image file="FAI_SUPP_GUERILLA.png" />
 		<image file="FAI_TANK_BATTLE+mask.png" />
 		<image file="FAI_TANK_BATTLE.png" />
 		<image file="FAI_TANK_HEAVY+mask.png" />

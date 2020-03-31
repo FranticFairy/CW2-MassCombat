@@ -6,3 +6,8 @@ DESERT_DESTROYEDWELD.getTerrainAnimationBackground = function(unit, terrain)
 {
     return "back_desert";
 };
+
+DESERT_DESTROYEDWELD.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

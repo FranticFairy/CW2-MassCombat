@@ -10,3 +10,9 @@ DESERT_ROCK.loadBaseSprite = function(terrain)
 {
     terrain.loadBaseSprite("desert_rock");   
 };
+
+
+DESERT_ROCK.init = function (terrain)
+{
+    terrain.setVisionHigh(3);
+};

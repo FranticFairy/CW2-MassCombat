@@ -30,6 +30,9 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        if(unit.getFuel() < 0) {
+            unit.setFuel(0);
+        }
     };
     this.createExplosionAnimation = function(x, y, unit)
     {
@@ -68,7 +71,7 @@ var Constructor = function()
     };
     this.getBaseCost = function()
     {
-        return 16000;
+        return 15000;
     };
     this.getName = function()
     {
@@ -84,7 +87,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_PLANE_FIGHTER","FAI_PLANE_SEAPLANE","FAI_HELI_GUNSHIP","FAI_HELI_INF","FAI_HELI_VHC","FAI_PLANE_TANKBUSTER","FAI_PLANE_STEALTHFIGHTER"];
+        return ["FAI_PLANE_FIGHTER","FAI_PLANE_SEAPLANE","FAI_HELI_GUNSHIP","FAI_HELI_VHC","FAI_PLANE_TANKBUSTER","FAI_PLANE_STEALTHFIGHTER"];
     };
     this.getDescription = function()
     {

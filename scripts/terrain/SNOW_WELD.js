@@ -6,3 +6,8 @@ SNOW_WELD.getTerrainAnimationBackground = function(unit, terrain)
 {
     return "back_snow";
 };
+
+SNOW_WELD.init = function (terrain)
+{
+    terrain.setVisionHigh(2);
+};

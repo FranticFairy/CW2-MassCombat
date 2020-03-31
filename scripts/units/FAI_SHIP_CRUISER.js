@@ -33,6 +33,9 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        if(unit.getFuel() < 0) {
+            unit.setFuel(0);
+        }
     };
     this.createExplosionAnimation = function(x, y, unit)
     {
@@ -71,7 +74,7 @@ var Constructor = function()
     };
     this.getBaseCost = function()
     {
-        return 13000;
+        return 14000;
     };
     this.getName = function()
     {

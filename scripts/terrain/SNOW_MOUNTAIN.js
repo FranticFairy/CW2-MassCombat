@@ -10,3 +10,8 @@ SNOW_MOUNTAIN.loadBaseSprite = function(terrain)
 {
     terrain.loadBaseSprite("snow_mountain");   
 };
+
+SNOW_MOUNTAIN.init = function (terrain)
+{
+    terrain.setVisionHigh(3);
+};

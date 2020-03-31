@@ -8,6 +8,7 @@ var Constructor = function()
     this.init = function (terrain)
     {
         terrain.setTerrainName(RAILBRIDGE.getName());
+        terrain.setVisionHigh(0);
     };
 
     this.getName = function()

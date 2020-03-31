@@ -8,6 +8,7 @@ var Constructor = function()
     this.init = function (terrain)
     {
         terrain.setTerrainName(DESERT_PIPELINE.getName());
+        terrain.setVisionHigh(2);
     };
     this.getName = function()
     {

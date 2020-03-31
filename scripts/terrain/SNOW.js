@@ -13,3 +13,8 @@ SNOW.loadBaseSprite = function(terrain)
 SNOW.loadOverlaySprite = function(terrain)
 {
 };
+
+SNOW.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

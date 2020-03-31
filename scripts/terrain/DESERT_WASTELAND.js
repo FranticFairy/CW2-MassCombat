@@ -6,3 +6,7 @@ DESERT_WASTELAND.getTerrainAnimationBackground = function(unit, terrain)
 {
     return "back_desert";
 };
+DESERT_WASTELAND.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

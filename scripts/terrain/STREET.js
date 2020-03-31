@@ -4,3 +4,8 @@ STREET.loadBaseSprite = function(terrain)
                                                false, false, GameEnums.Directions_Direct, false, true);
     terrain.loadBaseSprite("street" + surroundings);
 };
+
+STREET.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

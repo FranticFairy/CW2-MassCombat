@@ -1,1 +1,5 @@
-//nothing here!
+
+METEOR.init = function (terrain)
+{
+    terrain.setVisionHigh(1);
+};
