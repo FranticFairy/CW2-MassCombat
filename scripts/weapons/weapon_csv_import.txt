@@ -1,13 +1,12 @@
 var Constructor = function()
 {
-	@name
+	@custom
     this.damageTable = [];
 
     this.getName = function()
     {
         return qsTr("@name");
     };
-	@custom
     this.getBaseDamage = function(unit)
     {
         return WEAPON.getDamageFromTable(unit, @obj.damageTable, "@obj");

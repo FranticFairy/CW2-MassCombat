@@ -8,7 +8,7 @@ var Constructor = function()
         unit.setAmmo1(6);
         unit.setMaxAmmo1(6);
 
-        unit.setWeapon2ID("WEP_FAI_MINES");
+        unit.setWeapon2ID("WEP_FAI_MINE");
         unit.setAmmo2(2);
         unit.setMaxAmmo2(2);
 
@@ -33,6 +33,9 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        if(unit.getFuel() < 0) {
+            unit.setFuel(0);
+        }
     };
     this.createExplosionAnimation = function(x, y, unit)
     {

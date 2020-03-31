@@ -1,1 +1,5 @@
-//nothing here!
+
+PLASMA.init = function (terrain)
+{
+    terrain.setVisionHigh(2);
+};

@@ -1,1 +1,5 @@
-//nothing here yet!
+
+FIRE.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

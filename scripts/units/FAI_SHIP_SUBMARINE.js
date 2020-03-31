@@ -58,6 +58,9 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        if(unit.getFuel() < 0 && unit.getHidden() === false) {
+            unit.setFuel(0);
+        }
     };
     this.getBaseCost = function()
     {

@@ -13,3 +13,7 @@ DESERT.loadBaseSprite = function(terrain)
 DESERT.loadOverlaySprite = function(terrain)
 {
 };
+DESERT.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

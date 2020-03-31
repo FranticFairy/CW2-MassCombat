@@ -92,3 +92,8 @@ SEA.loadOverlaySprite = function (terrain) {
         }
     }
 };
+
+SEA.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

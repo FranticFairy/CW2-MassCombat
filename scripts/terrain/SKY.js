@@ -8,6 +8,7 @@ var Constructor = function()
     this.init = function (terrain)
     {
         terrain.setTerrainName(SKY.getName());
+        terrain.setVisionHigh(0);
     };
 
     this.getName = function()

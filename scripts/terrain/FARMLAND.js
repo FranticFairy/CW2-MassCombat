@@ -8,6 +8,7 @@ var Constructor = function()
     this.init = function (terrain)
     {
         terrain.setTerrainName(FARMLAND.getName());
+        terrain.setVisionHigh(0);
     };
     this.getName = function()
     {

@@ -23,6 +23,9 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        if(unit.getFuel() < 0) {
+            unit.setFuel(0);
+        }
     };
     this.createExplosionAnimation = function(x, y, unit)
     {
@@ -77,7 +80,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_TRANS_TRUCK","FAI_TRANS_AMPHI","FAI_IFV","FAI_IFV_AMPHI","FAI_GUN_ARTY","FAI_GUN_AT","FAI_TANK_LIGHT","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_UTIL_SUPPLY","FAI_TRANS_HALFT","FAI_INF_RIFLE","FAI_UTIL_ARV","FAI_UTIL_DOZER","FAI_CASH_TRUCK"];
+        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_IFV","FAI_IFV_AMPHI","FAI_GUN_ARTY","FAI_GUN_AT","FAI_TANK_LIGHT","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_UTIL_SUPPLY","FAI_TRANS_HALFT","FAI_INF_RIFLE","FAI_UTIL_ARV","FAI_UTIL_DOZER","FAI_CASH_TRUCK"];
     };
     this.getDescription = function()
     {

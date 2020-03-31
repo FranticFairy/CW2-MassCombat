@@ -5,7 +5,8 @@ var Constructor = function()
         unit.setFuel(70);
         unit.setMaxFuel(70);
         unit.setBaseMovementPoints(6);
-        unit.setVision(2)
+        unit.setVision(2);
+        unit.setVisionHigh(10);
     };
     // called for loading the main sprite
     this.loadSprites = function(unit)
@@ -74,7 +75,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_TRANS_TRUCK","FAI_TRANS_AMPHI","FAI_IFV","FAI_IFV_AMPHI","FAI_TRANS_HALFT","FAI_INF_RIFLE"];
+        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_IFV","FAI_IFV_AMPHI","FAI_TRANS_HALFT","FAI_INF_RIFLE"];
     };
     this.getName = function()
     {

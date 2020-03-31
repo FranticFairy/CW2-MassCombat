@@ -14,3 +14,8 @@ SNOW_FOREST.loadBaseSprite = function(terrain)
 {
     terrain.loadBaseSprite("snow_forest");   
 };
+
+SNOW_FOREST.init = function (terrain)
+{
+    terrain.setVisionHigh(1);
+};

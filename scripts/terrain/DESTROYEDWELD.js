@@ -1,1 +1,5 @@
-//nothing here yet!
+
+DESTROYEDWELD.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

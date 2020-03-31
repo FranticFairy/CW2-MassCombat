@@ -140,5 +140,9 @@
 		<image file="FAI_UTIL_DOZER.png" />
 		<image file="FAI_UTIL_SUPPLY+mask.png" />
 		<image file="FAI_UTIL_SUPPLY.png" />
+		<image file="FAI_SUPP_SECURITY+mask.png" />
+		<image file="FAI_SUPP_SECURITY.png" />
+		<image file="FAI_SUPP_GUERILLA+mask.png" />
+		<image file="FAI_SUPP_GUERILLA.png" />
 	</atlas>
 </resources>

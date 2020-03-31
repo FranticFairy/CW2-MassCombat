@@ -11,7 +11,8 @@ var Constructor = function()
         unit.setFuel(40);
         unit.setMaxFuel(40);
         unit.setBaseMovementPoints(7);
-        unit.setVision(5)
+        unit.setVision(5);
+        unit.setVisionHigh(50);
     };
     // called for loading the main sprite
     this.loadSprites = function(unit)

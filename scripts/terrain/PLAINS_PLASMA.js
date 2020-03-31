@@ -10,3 +10,7 @@ PLAINS_PLASMA.getTerrainAnimationBackground = function(unit, terrain)
 {
     return "back_scorched";
 };
+PLAINS_PLASMA.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};
