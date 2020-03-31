@@ -50,8 +50,8 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
         var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 1.5);
-        animation.loadSprite(unitID + "", false, 1.5);
+        animation.loadSprite(unitID + "+mask", true, 1);
+        animation.loadSprite(unitID, false, 1);
         animation.setSound("moveship.wav", -2);
         return animation;
     };
