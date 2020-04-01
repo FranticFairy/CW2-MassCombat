@@ -55,10 +55,6 @@ var Constructor = function()
     {
         return 1;
     };
-    this.getTransportUnits = function()
-    {
-        return ["FAI_INF_RIFLE"];
-    };
     this.getDescription = function()
     {
         return qsTr("Mechanized Infantry ride into battle in lightly-armoured Halftracks. They're more useful for the added mobility than the firepower...");

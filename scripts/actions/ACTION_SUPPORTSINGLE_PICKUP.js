@@ -14,7 +14,7 @@ var Constructor = function ()
         if ((actionTargetField.x === targetField.x) && (actionTargetField.y === targetField.y) ||
                 (action.getMovementTarget() === null))
         {
-            if (ACTION_PICKUP.getUnitFields(action).length > 0)
+            if (ACTION_SUPPORTSINGLE_PICKUP.getUnitFields(action).length > 0)
             {
                 return true;
             }
@@ -82,7 +82,7 @@ var Constructor = function ()
         var unit = action.getTargetUnit();
         var actionTargetField = action.getActionTarget();
         data.setColor("#C800FF00");
-        var fields = ACTION_PICKUP.getUnitFields(action);
+        var fields = ACTION_SUPPORTSINGLE_PICKUP.getUnitFields(action);
         for (var i3 = 0; i3 < fields.length; i3++)
         {
             data.addPoint(Qt.point(fields[i3].x, fields[i3].y));
@@ -96,16 +96,16 @@ var Constructor = function ()
         // we need to move the unit to the target position
         var unit = action.getTargetUnit();
         var animation = Global[unit.getUnitID()].doWalkingAnimation(action);
-        animation.setEndOfAnimationCall("ACTION_PICKUP", "performPostAnimation");
+        animation.setEndOfAnimationCall("ACTION_SUPPORTSINGLE_PICKUP", "performPostAnimation");
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
         action.startReading();
         var x = action.readDataInt32();
         var y = action.readDataInt32();
-        ACTION_PICKUP.postAnimationPickupPosX = x;
-        ACTION_PICKUP.postAnimationPickupPosY = y;
-        ACTION_PICKUP.postAnimationLoader = unit;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosX = x;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosY = y;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationLoader = unit;
         
     };
 
@@ -113,17 +113,17 @@ var Constructor = function ()
     {
         // unloading the units here :)
         var player = map.getCurrentPlayer();
-        terrain = map.getTerrain(ACTION_PICKUP.postAnimationPickupPosX, ACTION_PICKUP.postAnimationPickupPosY);
+        terrain = map.getTerrain(ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosX, ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosY);
         targetUnit = terrain.getUnit();
-        targetUnit.setHasMoved(true);
-        ACTION_PICKUP.postAnimationLoader.loadUnit(targetUnit);
+        targetACTION_ENDMOVE.perform(unit);
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationLoader.loadUnit(targetUnit);
         
         audio.playSound("load.wav");
-        ACTION_PICKUP.postAnimationPickupPosX = null;
-        ACTION_PICKUP.postAnimationPickupPosY = null;
-        ACTION_PICKUP.postAnimationLoader = null;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosX = null;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosY = null;
+        ACTION_SUPPORTSINGLE_PICKUP.postAnimationLoader = null;
     };
 }
 
 Constructor.prototype = ACTION;
-var ACTION_PICKUP = new Constructor();
+var ACTION_SUPPORTSINGLE_PICKUP = new Constructor();

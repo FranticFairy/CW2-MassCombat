@@ -56,10 +56,6 @@ var Constructor = function()
     {
         return 1;
     };
-    this.getTransportUnits = function()
-    {
-        return ["FAI_INF_RIFLE"];
-    };
     this.getDescription = function()
     {
         return qsTr("IFVs are nice and all, but rivers can sometimes be annoying. Not anymore, thanks to the Amphibious IFV! Though it's autocannon is weaker, this vehicle can cross rivers without issue!");

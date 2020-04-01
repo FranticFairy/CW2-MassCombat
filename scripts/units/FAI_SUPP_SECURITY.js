@@ -53,7 +53,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr(".");
+        return qsTr("Lightly-armed soldiers that are primarily useful for securing nearby neutral structures and as a cheap defensive unit. Not intended for frontline combat.");
     };
     this.getUnitType = function()
     {

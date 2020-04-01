@@ -11,7 +11,7 @@ var UNITRANKINGSYSTEM =
     icons : ["", "lieutenant", "general", "veteran"],
     names : [qsTr("Green"), qsTr("Experienced"), qsTr("Veteran"), qsTr("Elite")],
     offensiveBonus : [0, 5, 10, 20],
-    defensiveBonus : [0, 0,  0, 20],
+    defensiveBonus : [0, 0,  5, 10],
     getIcon : function(rang)
 	{
         if (rang === UNITRANKINGSYSTEM.co1)

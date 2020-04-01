@@ -58,10 +58,6 @@ var Constructor = function()
     {
         return 1;
     };
-    this.getTransportUnits = function()
-    {
-        return ["FAI_INF_RIFLE"];
-    };
     this.canMoveAndFire = function()
     {
         return true;

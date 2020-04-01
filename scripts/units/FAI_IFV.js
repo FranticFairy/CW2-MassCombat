@@ -59,10 +59,6 @@ var Constructor = function()
     {
         return 1;
     };
-    this.getTransportUnits = function()
-    {
-        return ["FAI_INF_RIFLE"];
-    };
     this.getUnitType = function()
     {
         return GameEnums.UnitType_Ground;

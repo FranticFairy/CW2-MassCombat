@@ -301,7 +301,9 @@ var Constructor = function()
         // move unit to target position
         ACTION_UNLOAD.postAnimationUnit.moveUnitAction(action);
         // disable unit commandments for this turn
-        ACTION_UNLOAD.postAnimationUnit.setHasMoved(true);
+		var unit = ACTION_UNLOAD.postAnimationUnit;
+		ACTION_ENDMOVE.perform(unit);
+		
         action.startReading();
         var step = action.getInputStep();
         for (var i = 0; i < step; i += 2)

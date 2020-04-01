@@ -12,20 +12,20 @@ var Constructor = function () {
             (action.getMovementTarget() === null)) {
             var x = actionTargetField.x + 1;
             var y = actionTargetField.y;
-            if (ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 return true;
             }
             x = actionTargetField.x - 1;
-            if (ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 return true;
             }
             x = actionTargetField.x;
             y = actionTargetField.y + 1;
-            if (ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 return true;
             }
             y = actionTargetField.y - 1;
-            if (ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 return true;
             }
         }
@@ -66,16 +66,18 @@ var Constructor = function () {
     this.postAnimationUnit = null;
     this.perform = function (action) {
         // we need to move the unit to the target position
-        ACTION_RATION.postAnimationUnit = action.getTargetUnit();
-        var animation = Global[ACTION_RATION.postAnimationUnit.getUnitID()].doWalkingAnimation(action);
-        animation.setEndOfAnimationCall("ACTION_RATION", "performPostAnimation");
+        ACTION_SUPPORTALL_RATION.postAnimationUnit = action.getTargetUnit();
+        var animation = Global[ACTION_SUPPORTALL_RATION.postAnimationUnit.getUnitID()].doWalkingAnimation(action);
+        animation.setEndOfAnimationCall("ACTION_SUPPORTALL_RATION", "performPostAnimation");
         // move unit to target position
-        ACTION_RATION.postAnimationUnit.moveUnitAction(action);
-        ACTION_RATION.postAnimationUnit.setHasMoved(true);
+        ACTION_SUPPORTALL_RATION.postAnimationUnit.moveUnitAction(action);
+		
+		var unit = ACTION_SUPPORTALL_RATION.postAnimationUnit;
+		ACTION_ENDMOVE.perform(unit);
     };
     this.performPostAnimation = function (postAnimation) {
-        ACTION_RATION.giveRation(ACTION_RATION.postAnimationUnit);
-        ACTION_RATION.postAnimationUnit = null;
+        ACTION_SUPPORTALL_RATION.giveRation(ACTION_SUPPORTALL_RATION.postAnimationUnit);
+        ACTION_SUPPORTALL_RATION.postAnimationUnit = null;
     };
 
     this.giveRation = function (unit) {
@@ -90,9 +92,9 @@ var Constructor = function () {
         var x = unit.getX() + 1;
         var y = unit.getY();
         var animation = null;
-        if (ACTION_RATION.checkUnit(unit, x, y)) {
+        if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 1) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -101,7 +103,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 16) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -119,9 +121,9 @@ var Constructor = function () {
 
         }
         x = unit.getX() - 1;
-        if (ACTION_RATION.checkUnit(unit, x, y)) {
+        if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 1) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -130,7 +132,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 16) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -148,9 +150,9 @@ var Constructor = function () {
         }
         x = unit.getX();
         y = unit.getY() + 1;
-        if (ACTION_RATION.checkUnit(unit, x, y)) {
+        if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 1) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -159,7 +161,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 16) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -176,9 +178,9 @@ var Constructor = function () {
             }
         }
         y = unit.getY() - 1;
-        if (ACTION_RATION.checkUnit(unit, x, y)) {
+        if (ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
             if (supplier == "land" || supplier == "land8") {
-                if (ACTION_RATION.checkType(x, y) == 1) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -187,7 +189,7 @@ var Constructor = function () {
 
                 }
             } else if (supplier == "sea") {
-                if (ACTION_RATION.checkType(x, y) == 16) {
+                if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 16) {
                     map.getTerrain(x, y).getUnit().refill();
                     animation = GameAnimationFactory.createAnimation(x, y);
                     animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -207,7 +209,7 @@ var Constructor = function () {
         if(supplier == "land8") {
             x = unit.getX() + 1;
             y = unit.getY() + 1;
-            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1 && ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -216,7 +218,7 @@ var Constructor = function () {
             
             x = unit.getX() - 1;
             y = unit.getY() + 1;
-            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1 && ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -225,7 +227,7 @@ var Constructor = function () {
             
             x = unit.getX() - 1;
             y = unit.getY() - 1;
-            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1 && ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -234,7 +236,7 @@ var Constructor = function () {
             
             x = unit.getX() + 1;
             y = unit.getY() - 1;
-            if (ACTION_RATION.checkType(x, y) == 1 && ACTION_RATION.checkUnit(unit, x, y)) {
+            if (ACTION_SUPPORTALL_RATION.checkType(x, y) == 1 && ACTION_SUPPORTALL_RATION.checkUnit(unit, x, y)) {
                 map.getTerrain(x, y).getUnit().refill();
                 animation = GameAnimationFactory.createAnimation(x, y);
                 animation.addSprite("ration", map.getImageSize() / 2, map.getImageSize() / 3, 400);
@@ -247,4 +249,4 @@ var Constructor = function () {
 }
 
 Constructor.prototype = ACTION;
-var ACTION_RATION = new Constructor();
+var ACTION_SUPPORTALL_RATION = new Constructor();

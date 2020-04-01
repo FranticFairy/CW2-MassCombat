@@ -19,7 +19,7 @@ var Constructor = function()
 
     this.loadFireAnimation = function(sprite, unit, defender, weapon)
     {
-        FAI_IFV_AMPHI.loadStandingAnimation(sprite, unit, defender, weapon);
+        BATTLEANIMATION_FAI_IFV_AMPHI.loadStandingAnimation(sprite, unit, defender, weapon);
         // if (weapon === 0) {
         //     // // gun
     

@@ -10,7 +10,7 @@ var Constructor = function()
         unit.setMaxAmmo2(10);
         unit.setFuel(99);
         unit.setMaxFuel(99);
-        unit.setBaseMovementPoints(4);
+        unit.setBaseMovementPoints(5);
         unit.setVision(5)
     };
     // called for loading the main sprite
@@ -45,7 +45,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_MISSILE,ACTION_CAPTURE,ACTION_FIRE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT,ACTION_CO_UNIT_0,ACTION_CO_UNIT_1";
+        return "ACTION_MISSILE,ACTION_CAPTURE,ACTION_FIRE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.canMoveAndFire = function()
     {
@@ -53,7 +53,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr(".");
+        return qsTr("Partisans, Resistance fighters, and other disgruntled citizens and ex-soldiers useful for fighting asymmetrical war against your enemy. They turn enemy buildings neutral, and are stealthed if they end their turn on Forests.");
     };
     this.getUnitType = function()
     {

@@ -15,7 +15,7 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        unit.setHasMoved(true);
+        ACTION_ENDMOVE.perform(unit);
         animation.setEndOfAnimationCall("ACTION_TRAP", "performPostAnimation");
         action.startReading();
         ACTION_TRAP.postAnimationTrapSignX = action.readDataInt32();
@@ -26,8 +26,8 @@ var Constructor = function()
     this.performPostAnimation = function(postAnimation)
     {
         var animation = GameAnimationFactory.createAnimation(ACTION_TRAP.postAnimationTrapSignX, ACTION_TRAP.postAnimationTrapSignY);
-        animation.addSprite("trap", map.getImageSize() / 2, map.getImageSize() / 3, 400);
-        animation.addText(qsTr("TRAP!"), map.getImageSize() / 2 + 15, map.getImageSize() / 3, 0.7);
+        animation.addSprite("trap", map.getImageSize() / 2, 0, 400, 1.5);
+        animation.addText(qsTr("TRAP!"), map.getImageSize() / 2 + 25, 2, 1);
         audio.playSound("trap.wav");
         ACTION_TRAP.postAnimationTrapSignX = -1;
         ACTION_TRAP.postAnimationTrapSignY = -1;

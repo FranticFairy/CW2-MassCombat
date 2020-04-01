@@ -112,7 +112,8 @@ var Constructor = function()
 
         repairUnit.refill();
         UNIT.repairUnit(repairUnit, 1);
-        ACTION_REPAIR.postAnimationUnit.setHasMoved(true);
+		var unit = ACTION_REPAIR.postAnimationUnit;
+		ACTION_ENDMOVE.perform(unit);
         ACTION_REPAIR.postAnimationUnit = null;
         ACTION_REPAIR.postAnimationTargetX = -1;
         ACTION_REPAIR.postAnimationTargetY = -1;

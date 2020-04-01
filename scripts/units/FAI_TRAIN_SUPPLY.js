@@ -27,7 +27,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_RATION,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
+        return "ACTION_SUPPORTALL_RATION,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.getMovementType = function()
     {

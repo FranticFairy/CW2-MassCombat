@@ -76,7 +76,7 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        unit.setHasMoved(true);
+        ACTION_ENDMOVE.perform(unit);
         unit.reduceAmmo1(1);
         action.startReading();
         // read action data

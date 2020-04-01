@@ -99,7 +99,7 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        unit.setHasMoved(true);
+        ACTION_ENDMOVE.perform(unit);
         unit.reduceAmmo2(1);
         action.startReading();
         var x = action.readDataInt32();
@@ -118,7 +118,7 @@ var Constructor = function()
         {
             // pay for the unit
             map.getGameRecorder().buildUnit(player.getPlayerID());
-            unit.setHasMoved(true);
+            ACTION_ENDMOVE.perform(unit);
         }
         player.buildedUnit(unit);
         audio.playSound("unload.wav");

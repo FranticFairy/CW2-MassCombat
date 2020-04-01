@@ -29,8 +29,8 @@ var Constructor = function()
     {
         var player = building.getOwner();
         // get army name
-        animation.addBuildingSprite("hq+mask", startColor , capturedColor, true);
-        animation.addBuildingSprite("hq", startColor , capturedColor, false);
+        animation.addBuildingSprite("hq+os+mask", startColor , capturedColor, true);
+        animation.addBuildingSprite("hq+os", startColor , capturedColor, false);
     };
     this.getDefense = function()
     {
