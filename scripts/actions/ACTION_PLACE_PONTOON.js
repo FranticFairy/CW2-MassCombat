@@ -110,8 +110,18 @@ var Constructor = function()
         var player = map.getCurrentPlayer();
         map.replaceTerrain("BRIDGE", ACTION_PLACE_PONTOON.postAnimationPontoonPosX, ACTION_PLACE_PONTOON.postAnimationPontoonPosY);
         map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX, ACTION_PLACE_PONTOON.postAnimationPontoonPosY).loadSprites();
-        
 
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX, ACTION_PLACE_PONTOON.postAnimationPontoonPosY+1).loadSprites();
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX+1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY).loadSprites();
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX+1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY+1).loadSprites();
+
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX-1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY+1).loadSprites();
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX+1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY-1).loadSprites();
+
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX-1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY).loadSprites();
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX-1, ACTION_PLACE_PONTOON.postAnimationPontoonPosY-1).loadSprites();
+        map.getTerrain(ACTION_PLACE_PONTOON.postAnimationPontoonPosX, ACTION_PLACE_PONTOON.postAnimationPontoonPosY-1).loadSprites();
+        
         audio.playSound("unload.wav");
         ACTION_PLACE_PONTOON.postAnimationPontoonPosX = -1;
         ACTION_PLACE_PONTOON.postAnimationPontoonPosY = -1;

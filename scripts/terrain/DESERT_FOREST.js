@@ -14,3 +14,8 @@ DESERT_FOREST.loadBaseSprite = function(terrain)
 {
     terrain.loadBaseSprite("desert_forest");   
 };
+
+DESERT_FOREST.init = function (terrain)
+{
+    terrain.setVisionHigh(1);
+};

@@ -99,7 +99,7 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        unit.setHasMoved(true);
+        ACTION_ENDMOVE.perform(unit);
         unit.reduceAmmo2(1);
         action.startReading();
         var x = action.readDataInt32();
@@ -113,12 +113,12 @@ var Constructor = function()
         var player = map.getCurrentPlayer();
         var unit = map.spawnUnit(ACTION_PLACE_WATERMINE.postAnimationMinePosX,
                                  ACTION_PLACE_WATERMINE.postAnimationMinePosY,
-                                 "FAI_SEAMINE", player);
+                                 "FAI_OTH_SEAMINE", player);
         if (unit !== null)
         {
             // pay for the unit
             map.getGameRecorder().buildUnit(player.getPlayerID());
-            unit.setHasMoved(true);
+            ACTION_ENDMOVE.perform(unit);
         }
         player.buildedUnit(unit);
         audio.playSound("unload.wav");

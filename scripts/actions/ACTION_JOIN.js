@@ -99,7 +99,7 @@ var Constructor = function()
             ACTION_JOIN.postAnimationTargetUnit.makeCOUnit(1);
         }
         // disable unit commandments for this turn
-        ACTION_JOIN.postAnimationTargetUnit.setHasMoved(true);
+        ACTION_JOIN.postAnimationTargetACTION_ENDMOVE.perform(unit);
         ACTION_JOIN.postAnimationTargetUnit = null;
         ACTION_JOIN.postAnimationUnit = null;
     };

@@ -10,3 +10,8 @@ SNOW_WASTELAND.loadBaseSprite = function(terrain)
 {
     terrain.loadBaseSprite("snow_wasteland");   
 };
+
+SNOW_WASTELAND.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};

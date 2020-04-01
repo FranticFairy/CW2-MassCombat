@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<resources>
+	<set path = "mods/MassCombat/fonts" />
+	<font file="times_10.xml" />
+	<font file="main.xml" />
+	<font file="AWStandard.xml" />
+</resources>

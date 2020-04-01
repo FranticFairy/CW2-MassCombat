@@ -55,7 +55,7 @@ var Constructor = function () {
         ["TEMPORARY_HARBOUR", 1],
         ["AIRPORT", 1],
         ["TEMPORARY_AIRPORT", 1],
-        ["FACTORYY", 1],
+        ["FACTORsY", 1],
         ["LABOR", 1],
         ["MINE", 1],
         ["OILRIG", 1],

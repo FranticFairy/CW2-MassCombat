@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <resources>
-	<set path = "mods/fai_overhaul/images/building/" />
+	<set path = "mods/MassCombat/images/building/" />
 	<atlas>
 		<!-- factory -->
 		<image file="factory.png" cols = "2" />
@@ -42,30 +42,8 @@
 		<image file="silo+rocket.png" />
 		
 		<!-- hq -->
-		<image file="hq+ac.png" cols = "2" />
-		<image file="hq+ac+mask.png" cols = "2" />
-		<image file="hq+bd.png" cols = "2" />
-		<image file="hq+bd+mask.png" cols = "2" />
-		<image file="hq+bh.png" cols = "2" />
-		<image file="hq+bh+mask.png" cols = "2" />
-		<image file="hq+bm.png" cols = "2" />
-		<image file="hq+bm+mask.png" cols = "2" />
-		<image file="hq+dm.png" cols = "2" />
-		<image file="hq+dm+mask.png" cols = "2" />
-		<image file="hq+ge.png" cols = "2" />
-		<image file="hq+ge+mask.png" cols = "2" />
-		<image file="hq+gs.png" cols = "2" />
-		<image file="hq+gs+mask.png" cols = "2" />
-		<image file="hq+ma.png" cols = "2" />
-		<image file="hq+ma+mask.png" cols = "2" />
-		<image file="hq+os.png" cols = "2" />
-		<image file="hq+os+mask.png" cols = "2" />
-		<image file="hq+pf.png" cols = "2" />
-		<image file="hq+pf+mask.png" cols = "2" />
-		<image file="hq+ti.png" cols = "2" />
-		<image file="hq+ti+mask.png" cols = "2" />
-		<image file="hq+yc.png" cols = "2" />
-		<image file="hq+yc+mask.png" cols = "2" />		
+		<image file="hq.png" cols = "2" />
+		<image file="hq+mask.png" cols = "2" />
 		<image file="hq+neutral.png" />
 		
 		<!-- oilrig -->

@@ -7,38 +7,15 @@ var Constructor = function()
         var actionTargetField = action.getActionTarget();
         var targetField = action.getTarget();
         var transportTerrain = map.getTerrain(actionTargetField.x, actionTargetField.y);
-
-        // GameConsole.print("We are a: " + unit.getUnitID(), 1);
-        // GameConsole.print("We are on a: " + transportTerrain.getID(), 1);
-
-        var test = Qt.point(0, 1);
-
         if ((unit.getHasMoved() === true) ||
             (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0))
         {
             return false;
         }
 
-        if (unit.getUnitID() === "TRANSPORTPLANE")
-        {
-            if ((transportTerrain.getID() !== "AIRPORT") &&
-                (transportTerrain.getID() !== "TEMPORARY_AIRPORT") &&
-                (transportTerrain.getID() !== "STREET"))
-            {
-                return false;
-            }
-        }
 
-        if (unit.getUnitID() === "FAI_TRANSPLANE")
-        {
-            if ((transportTerrain.getID() !== "AIRPORT") &&
-                (transportTerrain.getID() !== "TEMPORARY_AIRPORT"))
-            {
-                return false;
-            }
-        }
-
-        if ((actionTargetField.x === targetField.x) && (actionTargetField.y === targetField.y) ||
+        if (ACTION_UNLOAD.isUnloadTerrain(unit, transportTerrain) &&
+            (actionTargetField.x === targetField.x) && (actionTargetField.y === targetField.y) ||
             (action.getMovementTarget() === null))
         {
             for (var i = 0; i < unit.getLoadedUnitCount(); i++)
@@ -52,6 +29,33 @@ var Constructor = function()
         return false;
 
     };
+
+    this.isUnloadTerrain = function(unit, transportTerrain)
+    {
+        var unitID = unit.getUnitID();
+        if (unitID === "FAI_PLANE_TRANS")
+        {
+            if ((transportTerrain.getID() !== "AIRPORT") &&
+                (transportTerrain.getID() !== "TEMPORARY_AIRPORT"))
+            {
+                return false;
+            }
+        }
+        else if (unitID === "FAI_SHIP_TRANS" ||
+                 unitID === "FAI_SHIP_LCA" ||
+                 unitID === "FAI_HOVER_TRANS" ||
+                 unitID === "FAI_SHIP_ORLYONOK" ||
+                 unitID === "FAI_SHIP_EKRANOPLAN")
+        {
+            if ((transportTerrain !== null &&
+                 (transportTerrain.getID() === "BRIDGE" || transportTerrain.getID() === "RAILBRIDGE")))
+            {
+                return false;
+            }
+        }
+        return true;
+    };
+
     this.getUnloadFields = function(action, transportUnitIdx)
     {
         var targetField = action.getActionTarget();
@@ -65,8 +69,9 @@ var Constructor = function()
         var ret = [];
         // can both units move over the current terrain?
         var moveType = Global[transportUnit.getMovementType()];
-        if ((moveType.getMovementpoints(targetTerrain, transportUnit) > 0) &&
-            (Global[unit.getMovementType()].getMovementpoints(targetTerrain, unit) > 0))
+        if (ACTION_UNLOAD.isUnloadTerrain(unit, targetTerrain) &&
+            (moveType.getMovementpoints(targetTerrain, transportUnit, targetTerrain) > 0) &&
+            (Global[unit.getMovementType()].getMovementpoints(targetTerrain, unit, targetTerrain) > 0))
         {
             // check all neighbour terrains
             for (var i = 0; i < targetFields.length; i++)
@@ -76,7 +81,7 @@ var Constructor = function()
                     var terrain = map.getTerrain(targetFields[i].x, targetFields[i].y);
                     var defUnit = terrain.getUnit();
                     // can the transported unit move over the terrain?
-                    if ((Global[transportUnit.getMovementType()].getMovementpoints(terrain, transportUnit) > 0) &&
+                    if ((Global[transportUnit.getMovementType()].getMovementpoints(terrain, transportUnit, targetTerrain) > 0) &&
                         (defUnit === null ||
                          defUnit.isStealthed(unit.getOwner()) ||
                          (((defUnit !== null) && (defUnit === unit)))))
@@ -296,7 +301,9 @@ var Constructor = function()
         // move unit to target position
         ACTION_UNLOAD.postAnimationUnit.moveUnitAction(action);
         // disable unit commandments for this turn
-        ACTION_UNLOAD.postAnimationUnit.setHasMoved(true);
+		var unit = ACTION_UNLOAD.postAnimationUnit;
+		ACTION_ENDMOVE.perform(unit);
+		
         action.startReading();
         var step = action.getInputStep();
         for (var i = 0; i < step; i += 2)

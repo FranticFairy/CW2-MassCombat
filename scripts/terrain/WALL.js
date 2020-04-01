@@ -1,1 +1,5 @@
-//nothing here!
+
+WALL.init = function (terrain)
+{
+    terrain.setVisionHigh(2);
+};

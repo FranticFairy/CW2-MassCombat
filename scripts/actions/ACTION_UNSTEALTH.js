@@ -56,8 +56,9 @@ var Constructor = function()
         else
         {
             animation.addSprite("stealth", -map.getImageSize() / 2, -map.getImageSize() / 2, 0, 1.5);
-        }
-        ACTION_UNSTEALTH.postAnimationUnit.setHasMoved(true);
+        }		
+		var unit = ACTION_UNSTEALTH.postAnimationUnit;
+		ACTION_ENDMOVE.perform(unit);
         ACTION_UNSTEALTH.postAnimationUnit.setHidden(false);
         ACTION_UNSTEALTH.postAnimationUnit = null;
     }

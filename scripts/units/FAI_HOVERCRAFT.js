@@ -4,7 +4,7 @@ var Constructor = function()
     {
         unit.setMinRange(1);
         unit.setMaxRange(1);
-        unit.setWeapon2ID("WEP_FAI_AUTOCANNON");
+        unit.setWeapon2ID("WEP_FAI_AUTOCAN");
 
         unit.setAmmo2(10);
         unit.setMaxAmmo2(10);
@@ -35,8 +35,8 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var animation = GameAnimationFactory.createWalkingAnimation(unit, action);
         var unitID = unit.getUnitID().toLowerCase();
-        animation.loadSprite(unitID + "+mask", true, 1.5);
-        animation.loadSprite(unitID, false, 1.5);
+        animation.loadSprite(unitID + "+mask", true, 1);
+        animation.loadSprite(unitID, false, 1);
         animation.setSound("moveship.wav", -2);
         return animation;
     };
@@ -46,7 +46,7 @@ var Constructor = function()
     };
     this.getBaseCost = function()
     {
-        return 12000;
+        return 11500;
     };
     this.getName = function()
     {

@@ -1,1 +1,5 @@
-//nothing here!
+
+WEAK_WALL.init = function (terrain)
+{
+    terrain.setVisionHigh(2);
+};

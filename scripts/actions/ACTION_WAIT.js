@@ -41,15 +41,10 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        unit.setHasMoved(true);
+        ACTION_ENDMOVE.perform(unit);
     };
 }
 
 Constructor.prototype = ACTION;
 var ACTION_WAIT = new Constructor();
 
-Constructor = function()
-{
-}
-Constructor.prototype = ACTION_WAIT;
-var ACTION_WAIT = new Constructor();

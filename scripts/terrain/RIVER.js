@@ -56,3 +56,8 @@ RIVER.loadBaseSprite = function (terrain) {
     }
     terrain.loadBaseSprite("river" + surroundings);
 };
+
+RIVER.init = function (terrain)
+{
+    terrain.setVisionHigh(0);
+};
