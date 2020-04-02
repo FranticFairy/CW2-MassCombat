@@ -17,6 +17,14 @@ var Constructor = function () {
         if ((terrain.getID() === "BRIDGE" || terrain.getID() === "RAILBRIDGE") && terrain.getBaseTerrainID() === "SEA") {
             return 1;
         }
+        if (unit.getUnitID() == "FAI_SHIP_SUBMARINE") {
+            if (unit.getHidden() == false) {
+                if (terrain.getID() == "BEACH") {
+
+                    return 2;
+                }
+            }
+        }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_SHIP.movementpointsTable);
     };
 };

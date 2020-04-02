@@ -65,7 +65,7 @@ var Constructor = function () {
     };
     this.performPostAnimation = function (postAnimation) {
 		var unit = ACTION_LOAD.postAnimationUnit;
-		ACTION_ENDMOVE.perform(unit);
+		unit.setHasMoved(true);
         ACTION_LOAD.postAnimationUnit.setCapturePoints(0);
         ACTION_LOAD.postAnimationTargetUnit.loadUnit(ACTION_LOAD.postAnimationUnit);
         audio.playSound("load.wav");

@@ -5,5 +5,5 @@ TELEPORTTILE.loadBaseSprite = function(terrain)
 
 TELEPORTTILE.init = function (terrain)
 {
-    terrain.setVisionHigh(0);
+    terrain.setVisionHigh(999);
 };

@@ -55,10 +55,6 @@ var Constructor = function()
     {
         return qsTr("For when you want your footsoldiers to pack a little more punch; IFVs carry an autocannon that shreds light vehicles, infantry, and even Helicopters.");
     };
-    this.getLoadingPlace = function()
-    {
-        return 1;
-    };
     this.getUnitType = function()
     {
         return GameEnums.UnitType_Ground;

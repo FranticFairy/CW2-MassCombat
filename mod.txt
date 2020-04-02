@@ -1,2 +1,2 @@
 name=Mass Combat
-description=Version 0.8.5 Prerelease 4 - Unit Rework! - Sprites are not mine! Check out the game Switchcars!
+description=Version 0.8.5 Prerelease 5 - Unit Rework! - Sprites are not mine! Check out the game Switchcars!

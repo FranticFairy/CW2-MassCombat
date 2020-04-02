@@ -45,15 +45,11 @@ var Constructor = function()
     };
     this.getName = function()
     {
-        return qsTr("Halftracks")
+        return qsTr("Mechanized Infantry")
     };
     this.canMoveAndFire = function()
     {
         return true;
-    };
-    this.getLoadingPlace = function()
-    {
-        return 1;
     };
     this.getDescription = function()
     {

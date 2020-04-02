@@ -57,7 +57,7 @@ var Constructor = function()
     };
     this.getIcon = function()
     {
-        return "WATERMINE";
+        return "FAI_OTH_SEAMINE";
     };
     this.isFinalStep = function(action)
     {
@@ -99,7 +99,7 @@ var Constructor = function()
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
-        ACTION_ENDMOVE.perform(unit);
+        unit.setHasMoved(true);
         unit.reduceAmmo2(1);
         action.startReading();
         var x = action.readDataInt32();
@@ -118,7 +118,7 @@ var Constructor = function()
         {
             // pay for the unit
             map.getGameRecorder().buildUnit(player.getPlayerID());
-            ACTION_ENDMOVE.perform(unit);
+            unit.setHasMoved(true);
         }
         player.buildedUnit(unit);
         audio.playSound("unload.wav");

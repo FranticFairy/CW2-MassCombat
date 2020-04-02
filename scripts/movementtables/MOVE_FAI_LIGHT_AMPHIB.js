@@ -9,15 +9,16 @@ var Constructor = function () {
         ["DESERT_DESTROYEDWELD", 1],
         ["DESERT_FOREST", 3],
         ["DESERT_PATH", 1],
-        ["DESERT_ROCK", 2],
+        ["DESERT_ROCK", 3],
         ["DESERT_TRY_RIVER", 2],
         ["DESERT_WASTELAND", 2],
         ["DESTROYEDWELD", 1],
         ["FARMLAND", 2],
         ["FOREST", 3],
         ["MARSH", 3],
-        ["MOUNTAIN", 2],
+        ["MOUNTAIN", 32],
         ["PLAINS", 1],
+        ["ELEVATED", 2],
         ["PLAINS_DESTROYED", 1],
         ["PLAINS_PLASMA", 1],
         ["RAILBRIDGE", 2],
@@ -28,7 +29,7 @@ var Constructor = function () {
         ["SNOW", 2],
         ["SNOW_DESTROYEDWELD", 2],
         ["SNOW_FOREST", 4],
-        ["SNOW_MOUNTAIN", 3],
+        ["SNOW_MOUNTAIN", 4],
         ["SNOW_WASTELAND", 3],
         ["STREET", 1],
         ["TELEPORTTILE", 0],
@@ -57,6 +58,22 @@ var Constructor = function () {
             (unit !== null) &&
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
+        }
+        if(map !== null) {
+            var uT = map.getTerrain(unit.getX(), unit.getY());
+            if(uT !== null) {
+                var unitTerrain = uT.getID();
+                if ((id === "MOUNTAIN")) {
+                    if(unitTerrain === "MOUNTAIN") {
+                        return 2;
+                    }
+                }
+                if ((id === "ELEVATED")) {
+                    if(unitTerrain === "ELEVATED") {
+                        return 2;
+                    }
+                }
+            }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_LIGHT_AMPHIB.movementpointsTable);
     };

@@ -438,5 +438,47 @@
 		
 		<image file="weld+E+W.png" />
 		<image file="weld+N+S.png" />
+		
+		<image file="highland+E+S+W.png" />
+		<image file="highland+E+S.png" />
+		<image file="highland+E+W.png" />
+		<image file="highland+E.png" />
+		<image file="highland+N+E+S+W.png" />
+		<image file="highland+N+E+S.png" />
+		<image file="highland+N+E+W.png" />
+		<image file="highland+N+E.png" />
+		<image file="highland+N+S+W.png" />
+		<image file="highland+N+S.png" />
+		<image file="highland+N+W.png" />
+		<image file="highland+N.png" />
+		<image file="highland+NE.png" />
+		<image file="highland+NW.png" />
+		<image file="highland+S+W.png" />
+		<image file="highland+S.png" />
+		<image file="highland+SE.png" />
+		<image file="highland+SW.png" />
+		<image file="highland+W.png" />
+		<image file="highland.png" />
+		
+		<image file="elevated+E+S+W.png" />
+		<image file="elevated+E+S.png" />
+		<image file="elevated+E+W.png" />
+		<image file="elevated+E.png" />
+		<image file="elevated+N+E+S+W.png" />
+		<image file="elevated+N+E+S.png" />
+		<image file="elevated+N+E+W.png" />
+		<image file="elevated+N+E.png" />
+		<image file="elevated+N+S+W.png" />
+		<image file="elevated+N+S.png" />
+		<image file="elevated+N+W.png" />
+		<image file="elevated+N.png" />
+		<image file="elevated+NE.png" />
+		<image file="elevated+NW.png" />
+		<image file="elevated+S+W.png" />
+		<image file="elevated+S.png" />
+		<image file="elevated+SE.png" />
+		<image file="elevated+SW.png" />
+		<image file="elevated+W.png" />
+		<image file="elevated.png" />
 	</atlas>
 </resources>

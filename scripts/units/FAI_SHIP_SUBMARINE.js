@@ -45,6 +45,15 @@ var Constructor = function()
     {
         return "MOVE_FAI_SHIP";
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.startOfTurn = function(unit)
     {
         // pay unit upkeep

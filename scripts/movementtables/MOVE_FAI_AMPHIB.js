@@ -44,6 +44,7 @@ var Constructor = function () {
         ["SILO", 1],
         ["SILO_ROCKET", 1],
         ["TOWER", 1],
+        ["ELEVATED", 2],
         ["TOWN", 1]
     ];
 
@@ -53,6 +54,22 @@ var Constructor = function () {
             (unit !== null) &&
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
+        }
+        if(map !== null) {
+            var uT = map.getTerrain(unit.getX(), unit.getY());
+            if(uT !== null) {
+                var unitTerrain = uT.getID();
+                if ((id === "MOUNTAIN")) {
+                    if(unitTerrain === "MOUNTAIN") {
+                        return 2;
+                    }
+                }
+                if ((id === "ELEVATED")) {
+                    if(unitTerrain === "ELEVATED") {
+                        return 2;
+                    }
+                }
+            }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_AMPHIB.movementpointsTable);
     };

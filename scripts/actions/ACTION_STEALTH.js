@@ -6,8 +6,10 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var actionTargetField = action.getActionTarget();
         var targetField = action.getTarget();
+        var terrain = map.getTerrain(actionTargetField.x, actionTargetField.y).getID();
         if ((unit.getHasMoved() === true) ||
-            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0))
+            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0) ||
+            (unit.getUnitID() == "FAI_SHIP_SUBMARINE" && terrain == "BEACH"))
         {
             return false;
         }
@@ -49,7 +51,7 @@ var Constructor = function()
     {
         // disable unit commandments for this turn
         var animation = GameAnimationFactory.createAnimation(ACTION_STEALTH.postAnimationUnit.getX(), ACTION_STEALTH.postAnimationUnit.getY());
-        if (ACTION_STEALTH.postAnimationUnit.getUnitID() === "SUBMARINE")
+        if (ACTION_STEALTH.postAnimationUnit.getUnitID() === "FAI_SHIP_SUBMARINE")
         {
             animation.addSprite("dive", -map.getImageSize() / 2, -map.getImageSize() / 2, 0, 1.5);
         }
@@ -58,7 +60,7 @@ var Constructor = function()
             animation.addSprite("stealth", -map.getImageSize() / 2, -map.getImageSize() / 2, 0, 1.5);
         }
 		var unit = ACTION_STEALTH.postAnimationUnit;
-		ACTION_ENDMOVE.perform(unit);
+		unit.setHasMoved(true);
         ACTION_STEALTH.postAnimationUnit.setHidden(true);
         ACTION_STEALTH.postAnimationUnit = null;
     }

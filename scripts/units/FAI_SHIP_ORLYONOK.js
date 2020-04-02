@@ -60,6 +60,15 @@ var Constructor = function()
     {
         return true;
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.getTerrainAnimationBase = function(unit, terrain)
     {
         return "base_air";
@@ -80,7 +89,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_IFV","FAI_IFV_AMPHI","FAI_GUN_ARTY","FAI_GUN_AT","FAI_TANK_LIGHT","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_UTIL_SUPPLY","FAI_TRANS_HALFT","FAI_INF_RIFLE","FAI_UTIL_ARV","FAI_UTIL_DOZER","FAI_CASH_TRUCK"];
+        return ["FAI_SUPP_SECURITY","FAI_SUPP_GUERILLA","FAI_IFV","FAI_IFV_AMPHI","FAI_GUN_ARTY","FAI_GUN_AT","FAI_TANK_LIGHT","FAI_SUPP_SPAA","FAI_SUPP_SPARTY","FAI_SUPP_RECON","FAI_SUPP_ARMORCAR","FAI_UTIL_SUPPLY","FAI_TRANS_HALFT","FAI_INF_RIFLE","FAI_UTIL_ARV","FAI_UTIL_DOZER","FAI_CASH_TRUCK","FAI_TANK_SWEEP"];
     };
     this.getDescription = function()
     {

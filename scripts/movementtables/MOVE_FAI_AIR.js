@@ -22,6 +22,7 @@ var Constructor = function () {
         ["MARSH", 1],
         ["METEOR", 1],
         ["MOUNTAIN", 1],
+        ["ELEVATED", 1],
         ["PIPELINE", 1],
         ["PLAINS", 1],
         ["PLAINS_DESTROYED", 1],

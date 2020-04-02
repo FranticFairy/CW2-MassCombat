@@ -37,7 +37,7 @@ var Constructor = function()
         for (var i = 0; i < units.size(); i++)
         {
             var unit = units.at(i);
-            if (unit.getHasMoved() === false)
+            if (unit.getHasMoved() === false && unit.getUnitID() !== "FAI_OTH_SEAMINE" && unit.getUnitID() !== "FAI_OTH_LANDMINE")
             {
                 data.addPoint(Qt.point(unit.getX(), unit.getY()));
             }

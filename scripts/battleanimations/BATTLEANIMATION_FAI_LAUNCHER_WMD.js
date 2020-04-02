@@ -14,6 +14,7 @@ var Constructor = function()
     this.loadFireAnimation = function(sprite, unit, defender, weapon)
     {
         BATTLEANIMATION_FAI_LAUNCHER_WMD.loadStandingAnimation(sprite, unit, defender, weapon);
+        sprite.loadSound("fire-nuke-explode.wav", 1, "mods/MassCombat/sounds/", 0);
         // if (weapon === 0) {
         //     // // gun
     

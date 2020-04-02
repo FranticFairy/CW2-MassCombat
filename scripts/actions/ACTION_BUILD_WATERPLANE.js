@@ -65,8 +65,8 @@ var Constructor = function()
         player.addFunds(-costs);
         map.getGameRecorder().buildUnit(player.getPlayerID());
         var spawnUnit = unit.spawnUnit(unitID);
-        ACTION_ENDMOVE.perform(unit);
-        spawnACTION_ENDMOVE.perform(unit);
+        unit.setHasMoved(true);
+        spawnunit.setHasMoved(true);
         player.buildedUnit(spawnUnit);
     };
 

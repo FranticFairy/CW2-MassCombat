@@ -54,17 +54,13 @@ var Constructor = function()
     {
         return qsTr("Hvy. Arm. Infantry")
     };
-    this.getLoadingPlace = function()
-    {
-        return 1;
-    };
     this.canMoveAndFire = function()
     {
         return true;
     };
     this.getDescription = function()
     {
-        return qsTr("For adding even more firepower to your infantry! These IFVs come with stronger autocannons and three attacks worth of Anti-Tank Missiles!");
+        return qsTr("For adding even more firepower to your infantry! These IFVs come with stronger autocannons and two attacks worth of Anti-Tank Missiles!");
     };
     this.getUnitType = function()
     {

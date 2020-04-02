@@ -13,11 +13,11 @@ var PLAYER =
         switch (index)
         {
             case 0:
-                //RED
+                //RED - Legion Cult
                 color = "#A80B00";
                 break;
             case 1:
-                //BLUE
+                //BLUE - Alfieq's Army
                 color = "#5575C2";
                 break;
             case 2:
@@ -25,11 +25,11 @@ var PLAYER =
                 color = "#267F00";
                 break;
             case 3:
-                //YELLOW
+                //YELLOW - Wolves' Pact
                 color = "#EEDC65";
                 break;
             case 4:
-                //PURPLE
+                //PURPLE - Revolutionary Army
                 color = "#57007F";
                 break;
             case 5:
@@ -49,19 +49,19 @@ var PLAYER =
                 color = "#FFFF00";
                 break;
             case 9:
-                //LGREY
+                //LGREY - Steel League
                 color = "#dedede";
                 break;
             case 10:
-                //ORANGE
+                //ORANGE - Parlin Republic
                 color = "#FF6A00";
                 break;
             case 11:
-                //TEAL
+                //TEAL - Independant States
                 color = "#007F7F";
                 break;
             case 12:
-                //AQUA
+                //AQUA - Allied Nations
                 color = "#0094FF";
                 break;                
             case 13:
@@ -69,7 +69,7 @@ var PLAYER =
                 color = "#FF00DC";
                 break;                
             case 14:
-                //BROWN
+                //BROWN - Tenaris Empire
                 color = "#7F3300";
                 break;                
             case 15:
@@ -77,11 +77,11 @@ var PLAYER =
                 color = "#3D4A2C";
                 break;
             case 16:
-                //MGREY
+                //MGREY - Sol Confederacy
                 color = "#424242";
                 break;
             case 17:
-                //GREENISH
+                //TOXIC GREEN
                 color = "#00FF90";
                 break;
             case 18:
@@ -138,31 +138,31 @@ var PLAYER =
         switch (army)
         {
             case "OS":
-                return tr("Orange Star");
+                return tr("Allied Nations");
             case "BM":
-                return tr("Blue Moon");
+                return tr("Parlin Republic");
             case "GE":
-                return tr("Green Earth");
+                return tr("Tenaris Empire");
             case "YC":
-                return tr("Yellow Comet");
+                return tr("Wolves' Pact");
             case "BH":
-                return tr("Black Hole");
+                return tr("Revolutionary Army");
             case "BG":
-                return tr("Bolt Guard");
+                return tr("Sol Confederacy");
             case "ML":
-                return tr("Metall Army");
+                return tr("Steel League");
             case "AC":
-                return tr("Amber Corona");
+                return tr("Alfieq's Army");
             case "BT":
-                return tr("Brown Desert");
-            case "GS":
-                return tr("Jade Sun");
-            case "PF":
-                return tr("Pink Crystal");
-            case "TI":
-                return tr("Teal Guard");
+                return tr("Independent States");
             case "DM":
-                return tr("Dark Matters");
+                return tr("Legion Cult");
+            case "GS":
+                return tr("Advance Wars COs");
+            case "PF":
+                return tr("Commander Wars COs");
+            case "TI":
+                return tr("Custom COs");
         }
     },
 
@@ -178,88 +178,74 @@ var PLAYER =
                 "MA",
                 "AC",
                 "BD",
+                "DM",
                 "GS",
                 "PF",
-                "TI",
-                "DM"];
+                "TI"];
     },
 
     getArmyCOsOS : function()
     {
-        return ["CO_EMPTY_OS", "CO_ANDY", "CO_MAX", "CO_SAMI", "CO_JAKE",
-                "CO_RACHEL", "CO_NELL", "CO_HACHI", "CO_RANDOM"];
+        return ["CO_EMPTY_OS", "CO_RANDOM"];
     },
 
     getArmyCOsBM : function()
     {
-        return ["CO_EMPTY_BM", "CO_GRIT", "CO_COLIN", "CO_SASHA", "CO_OLAF",
-                "CO_ALEXANDER", "CO_RANDOM"];
+        return ["CO_EMPTY_BM", "CO_RANDOM"];
     },
 
     getArmyCOsGE : function()
     {
-        return ["CO_EMPTY_GE", "CO_DRAKE", "CO_EAGLE", "CO_JESS", "CO_JAVIER",
-                "CO_PETER", "CO_SMITAN", "CO_RANDOM"];
+        return ["CO_EMPTY_GE", "CO_RANDOM"];
     },
 
     getArmyCOsYC : function()
     {
-        return ["CO_EMPTY_YC", "CO_SONJA", "CO_SENSEI", "CO_GRIMM", "CO_KANBEI",
-                "CO_RATTIGAN", "CO_RANDOM"];
+        return ["CO_EMPTY_YC", "CO_RANDOM"];
     },
 
     getArmyCOsBH : function()
     {
-        return ["CO_EMPTY_BH", "CO_FLAK", "CO_ADDER", "CO_LASH", "CO_HAWKE",
-                "CO_STURM", "CO_RANDOM"];
+        return ["CO_EMPTY_BH", "CO_RANDOM"];
     },
 
     getArmyCOsBG : function()
     {
-        return ["CO_EMPTY_BG", "CO_JUGGER", "CO_KOAL", "CO_KINDLE",
-                "CO_VON_BOLT", "CO_RANDOM"];
+        return ["CO_EMPTY_BG", "CO_RANDOM"];
     },
 
     getArmyCOsMA : function()
     {
-        return ["CO_EMPTY_MA", "CO_EPOCH", "CO_ROBOANDY", "CO_IK_486_B7", "CO_NAPOLEON",
-                "CO_ROBOSTURM", "CO_RANDOM"];
+        return ["CO_EMPTY_MA", "CO_RANDOM"];
     },
 
     getArmyCOsAC : function()
     {
-        return ["CO_EMPTY_AC", "CO_WILL", "CO_ISABELLA", "CO_LIN", "CO_BRENNER",
-                "CO_SABAKI", "CO_SOPHIE", "CO_OZZY", "CO_MARY", "CO_RANDOM"];
+        return ["CO_EMPTY_AC", "CO_RANDOM"];
     },
 
     getArmyCOsBD : function()
     {
-        return ["CO_EMPTY_BD", "CO_GAGE", "CO_TASHA", "CO_ADAM", "CO_FORSYTHE",
-                "CO_ZANDRA", "CO_RANDOM"];
+        return ["CO_EMPTY_BD", "CO_RANDOM"];
     },
 
     getArmyCOsGS : function()
     {
-        return ["CO_EMPTY_GS", "CO_MINAMOTO", "CO_XAVIER", "CO_SANJURO",
-                "CO_MEIYO", "CO_RANDOM"];
+        return ["CO_EMPTY_GS", "CO_RANDOM"];
     },
 
     getArmyCOsPF : function()
     {
-        return ["CO_EMPTY_PF", "CO_MINA", "CO_AIRA", "CO_ALEXIS",
-                "CO_NANA", "CO_AMY", "CO_RANDOM"];
+        return ["CO_EMPTY_PF", "CO_RANDOM"];
     },
 
     getArmyCOsTI : function()
     {
-        return ["CO_EMPTY_TI", "CO_CONRAD", "CO_CASSIDY", "CO_WAYLON",
-                "CO_GREYFIELD", "CO_JOEY", "CO_RANDOM"];
+        return ["CO_EMPTY_TI", "CO_RANDOM"];
     },
 
     getArmyCOsDM : function()
     {
-        return ["CO_EMPTY_DM", "CO_PENNY", "CO_TABITHA", "CO_CAULDER",
-                "CO_MELANTHE", "CO_JULIA", "CO_GRAVES", "CO_VARLOT",
-                "CO_YUKIO", "CO_RANDOM"];
+        return ["CO_EMPTY_DM", "CO_RANDOM"];
     },
 }

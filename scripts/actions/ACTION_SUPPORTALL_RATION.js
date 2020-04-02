@@ -73,7 +73,7 @@ var Constructor = function () {
         ACTION_SUPPORTALL_RATION.postAnimationUnit.moveUnitAction(action);
 		
 		var unit = ACTION_SUPPORTALL_RATION.postAnimationUnit;
-		ACTION_ENDMOVE.perform(unit);
+		unit.setHasMoved(true);
     };
     this.performPostAnimation = function (postAnimation) {
         ACTION_SUPPORTALL_RATION.giveRation(ACTION_SUPPORTALL_RATION.postAnimationUnit);

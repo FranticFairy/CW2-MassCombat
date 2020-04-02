@@ -12,7 +12,7 @@ var Constructor = function()
         unit.setFuel(70);
         unit.setMaxFuel(70);
         unit.setBaseMovementPoints(4);
-        unit.setVision(1)
+        unit.setVision(1);
     };
     // called for loading the main sprite
     this.loadSprites = function(unit)
@@ -32,6 +32,15 @@ var Constructor = function()
     this.getName = function()
     {
         return qsTr("Battleship")
+    };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
     };
     this.canMoveAndFire = function()
     {

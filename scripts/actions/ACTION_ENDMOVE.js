@@ -16,8 +16,31 @@ var Constructor = function () {
             }
         }
 
+        ACTION_ENDMOVE.heightMagic(unit);
         unit.setHasMoved(true);
     };
+
+    this.heightMagic = function (unit) {
+        var terrain = map.getTerrain(unit.getX(), unit.getY());
+        if (terrain != null) {
+            if (
+                unit.getUnitType() != GameEnums.UnitType_Naval &&
+                unit.getUnitType() !== GameEnums.UnitType_Air) {
+
+                var highlands = ["DESERT_ROCK", "MOUNTAIN", "SNOW_MOUNTAIN", "ELEVATED",
+                    "ELEVATED_FLAT, ELEVATED_ROUGH, ELEVATED_FOREST, HIGH_FLAT, HIGH_ROUGH, HIGH_FOREST"];
+                if (highlands.indexOf(terrain.getTerrainID()) >= 0) {
+                    unit.setVisionHigh(0);
+                }
+                else {
+                    unit.setVisionHigh(-1);
+                }
+
+            }
+
+        }
+
+    }
 }
 
 Constructor.prototype = ACTION;

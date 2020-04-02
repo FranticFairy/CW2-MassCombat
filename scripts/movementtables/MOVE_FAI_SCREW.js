@@ -16,6 +16,7 @@ var Constructor = function () {
         ["FOREST", 1],
         ["MARSH", 1],
         ["PLAINS", 2],
+        ["ELEVATED", 3],
         ["PLAINS_DESTROYED", 2],
         ["PLAINS_PLASMA", 2],
         ["RAILBRIDGE", 3],
@@ -53,6 +54,22 @@ var Constructor = function () {
             (unit !== null) &&
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
+        }
+        if(map !== null) {
+            var uT = map.getTerrain(unit.getX(), unit.getY());
+            if(uT !== null) {
+                var unitTerrain = uT.getID();
+                if ((id === "MOUNTAIN")) {
+                    if(unitTerrain === "MOUNTAIN") {
+                        return 2;
+                    }
+                }
+                if ((id === "ELEVATED")) {
+                    if(unitTerrain === "ELEVATED") {
+                        return 2;
+                    }
+                }
+            }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_SCREW.movementpointsTable);
     };

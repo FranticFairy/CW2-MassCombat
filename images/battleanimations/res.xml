@@ -144,5 +144,9 @@
 		<image file="FAI_SUPP_SECURITY.png" />
 		<image file="FAI_SUPP_GUERILLA+mask.png" />
 		<image file="FAI_SUPP_GUERILLA.png" />
+		<image file="FAI_SHIP_SWEEP+mask.png" />
+		<image file="FAI_SHIP_SWEEP.png" />
+		<image file="FAI_TANK_SWEEP+mask.png" />
+		<image file="FAI_TANK_SWEEP.png" />
 	</atlas>
 </resources>

@@ -17,6 +17,7 @@ var Constructor = function()
     ["FOREST", 2],
     ["MARSH", 3],
     ["PLAINS", 1],
+    ["ELEVATED", 2],
     ["PLAINS_DESTROYED", 2],
     ["PLAINS_PLASMA", 1],
     ["RAILBRIDGE", 1],
@@ -52,9 +53,24 @@ var Constructor = function()
         var id = terrain.getID();
         if ((id === "ZGATE_E_W" || id === "ZGATE_N_S") &&
             (unit !== null) &&
-            (unit.getOwner().isAlly(terrain.getBuilding().getOwner())))
-        {
+            (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
+        }
+        if(map !== null) {
+            var uT = map.getTerrain(unit.getX(), unit.getY());
+            if(uT !== null) {
+                var unitTerrain = uT.getID();
+                if ((id === "MOUNTAIN")) {
+                    if(unitTerrain === "MOUNTAIN") {
+                        return 1;
+                    }
+                }
+                if ((id === "ELEVATED")) {
+                    if(unitTerrain === "ELEVATED") {
+                        return 1;
+                    }
+                }
+            }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_HOVTANK.movementpointsTable);
     };

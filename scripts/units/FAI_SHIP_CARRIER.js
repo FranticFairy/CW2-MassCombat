@@ -34,6 +34,15 @@ var Constructor = function()
             unit.setFuel(0);
         }
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.createExplosionAnimation = function(x, y, unit)
     {
         var animation = GameAnimationFactory.createAnimation(x, y);
@@ -87,7 +96,7 @@ var Constructor = function()
     };
     this.getTransportUnits = function()
     {
-        return ["FAI_PLANE_FIGHTER","FAI_PLANE_SEAPLANE","FAI_HELI_GUNSHIP","FAI_HELI_VHC","FAI_PLANE_TANKBUSTER","FAI_PLANE_STEALTHFIGHTER"];
+        return ["FAI_PLANE_FIGHTER","FAI_PLANE_NAVJET","FAI_PLANE_SEAPLANE","FAI_HELI_GUNSHIP","FAI_HELI_VHC","FAI_PLANE_TANKBUSTER","FAI_PLANE_STEALTHFIGHTER"];
     };
     this.getDescription = function()
     {

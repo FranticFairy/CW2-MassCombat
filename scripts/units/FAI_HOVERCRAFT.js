@@ -30,6 +30,15 @@ var Constructor = function()
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.doWalkingAnimation = function(action)
     {
         var unit = action.getTargetUnit();
@@ -46,7 +55,7 @@ var Constructor = function()
     };
     this.getBaseCost = function()
     {
-        return 11500;
+        return 12000;
     };
     this.getName = function()
     {

@@ -18,9 +18,8 @@ var Constructor = function()
     {
         return 3;
     };
-    this.loadBaseTerrain = function(terrain, currentTerrainID)
-    {
-		terrain.loadBaseTerrain("PLAINS");
+    this.loadBaseTerrain = function (terrain, currentTerrainID) {
+        terrain.loadBaseTerrain("PLAINS");
     };
     this.loadBaseSprite = function(terrain)
     {

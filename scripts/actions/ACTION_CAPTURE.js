@@ -125,7 +125,7 @@ var Constructor = function () {
             }
         }
         // disable unit commandments for this turn
-		ACTION_ENDMOVE.perform(unit);
+		unit.setHasMoved(true);
         ACTION_CAPTURE.postAnimationUnit = null;
         ACTION_CAPTURE.postAnimationBuilding = null;
         ACTION_CAPTURE.postAnimationTarget = null;

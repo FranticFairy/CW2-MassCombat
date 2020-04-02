@@ -14,8 +14,9 @@ var Constructor = function () {
         ["DESTROYEDWELD", 2],
         ["FARMLAND", 2],
         ["FOREST", 2],
-        ["MOUNTAIN", 2],
+        ["MOUNTAIN", 3],
         ["PLAINS", 2],
+        ["ELEVATED", 2],
         ["PLAINS_DESTROYED", 2],
         ["PLAINS_PLASMA", 2],
         ["RAILBRIDGE", 2],
@@ -54,6 +55,22 @@ var Constructor = function () {
             (unit !== null) &&
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
+        }
+        if(map !== null) {
+            var uT = map.getTerrain(unit.getX(), unit.getY());
+            if(uT !== null) {
+                var unitTerrain = uT.getID();
+                if ((id === "MOUNTAIN")) {
+                    if(unitTerrain === "MOUNTAIN") {
+                        return 2;
+                    }
+                }
+                if ((id === "ELEVATED")) {
+                    if(unitTerrain === "ELEVATED") {
+                        return 2;
+                    }
+                }
+            }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_LIGHT_WHEEL.movementpointsTable);
     };

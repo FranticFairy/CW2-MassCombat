@@ -1,8 +1,6 @@
-FOREST.loadBaseSprite = function(terrain)
-{
-    terrain.loadBaseSprite("forest");   
+FOREST.loadBaseSprite = function (terrain) {
+    terrain.loadBaseSprite("forest");
 };
-FOREST.init = function (terrain)
-{
+FOREST.init = function (terrain) {
     terrain.setVisionHigh(1);
 };

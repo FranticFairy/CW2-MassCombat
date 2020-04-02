@@ -105,6 +105,7 @@
 		<image file="minimap/minimap_hq.png" />
 		<image file="minimap/minimap_meteor.png" />
 		<image file="minimap/minimap_mountain.png" />
+		<image file="minimap/minimap_elevated.png" />
 		<image file="minimap/minimap_pipeline.png" />
 		<image file="minimap/minimap_plains.png" />
 		<image file="minimap/minimap_plasma.png" />
@@ -196,24 +197,24 @@
 		<image file="superpower_background.png" guideX1="0" guideX2="480" guideY1="0" guideY2="320"/>
 		
 		<!-- co selection -->
-		<image file="os.png"/>
-		<image file="bm.png"/>
-		<image file="ge.png"/>
-		<image file="yc.png"/>
-		<image file="bh.png"/>
-		<image file="bg.png"/>
-		<image file="ma.png"/>
-		<image file="ac.png"/>
-		<image file="bd.png"/>
-		<image file="gs.png"/>
-		<image file="pf.png"/>
-		<image file="ti.png"/>
-		<image file="dm.png"/>
+		<image file="os.png"/> <!-- AN - Allied Nations -->
+		<image file="bm.png"/> <!-- PR - Parlin Republic -->
+		<image file="ge.png"/> <!-- TE - Tenaris Empire -->
+		<image file="yc.png"/> <!-- WP - Wolves' Pact -->
+		<image file="bh.png"/> <!-- RA - Revolutionary Army -->
+		<image file="bg.png"/> <!-- SC - Sol Confederacy -->
+		<image file="ma.png"/> <!-- SL - Steel Legion -->
+		<image file="ac.png"/> <!-- AA - Alfieq's Army -->
+		<image file="bd.png"/> <!-- IS - Independent States -->
+		<image file="gs.png"/> <!-- ?? - ??? -->
+		<image file="pf.png"/> <!-- ?? - ??? -->
+		<image file="ti.png"/> <!-- ?? - ??? -->
+		<image file="dm.png"/> <!-- LC - Legion Cult -->
 		<!-- aw dc armies -->
-		<image file="ib.png"/>
-		<image file="lz.png"/>
-		<image file="nr.png"/>
-		<image file="dv.png"/>
+		<image file="ib.png"/> <!-- ?? - ??? -->
+		<image file="lz.png"/> <!-- ?? - ??? -->
+		<image file="nr.png"/> <!-- ?? - ??? -->
+		<image file="dv.png"/> <!-- ?? - ??? -->
 	</atlas>
 </resources>
 

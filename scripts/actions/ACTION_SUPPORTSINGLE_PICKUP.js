@@ -115,7 +115,7 @@ var Constructor = function ()
         var player = map.getCurrentPlayer();
         terrain = map.getTerrain(ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosX, ACTION_SUPPORTSINGLE_PICKUP.postAnimationPickupPosY);
         targetUnit = terrain.getUnit();
-        targetACTION_ENDMOVE.perform(unit);
+        targetUnit.setHasMoved(true);
         ACTION_SUPPORTSINGLE_PICKUP.postAnimationLoader.loadUnit(targetUnit);
         
         audio.playSound("load.wav");

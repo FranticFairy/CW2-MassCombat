@@ -27,6 +27,15 @@ var Constructor = function()
             unit.setFuel(0);
         }
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.createExplosionAnimation = function(x, y, unit)
     {
         var animation = GameAnimationFactory.createAnimation(x, y);

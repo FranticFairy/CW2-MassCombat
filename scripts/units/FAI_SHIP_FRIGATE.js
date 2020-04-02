@@ -9,8 +9,8 @@ var Constructor = function()
         unit.setMaxAmmo1(6);
 
         unit.setWeapon2ID("WEP_FAI_MINE");
-        unit.setAmmo2(2);
-        unit.setMaxAmmo2(2);
+        unit.setAmmo2(1);
+        unit.setMaxAmmo2(1);
 
         unit.setFuel(70);
         unit.setMaxFuel(70);
@@ -23,6 +23,15 @@ var Constructor = function()
         // load sprites
         unit.loadSprite("FAI_SHIP_FRIGATE", false);
         unit.loadSprite("FAI_SHIP_FRIGATE+mask", true);
+    };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
     };
     this.startOfTurn = function(unit)
     {

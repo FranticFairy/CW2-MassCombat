@@ -32,6 +32,16 @@
 		<image file="icons/material.png" />		
 		<image file="icons/material1.png" />
 		
+		<image file="icons/green1.png" />
+		<image file="icons/green2.png" />
+		<image file="icons/experienced1.png" />
+		<image file="icons/experienced2.png" />
+		<image file="icons/experienced3.png" />
+		<image file="icons/elite1.png" />
+		<image file="icons/elite2.png" />
+		<image file="icons/elite3.png" />
+		<image file="icons/elite4.png" />
+		<image file="icons/elite5.png" />
 		
 		<!--Units-->
 		<image file="FAI_CASH_PLANE+mask.png" />
@@ -172,5 +182,9 @@
 		<image file="FAI_UTIL_DOZER.png" />
 		<image file="FAI_UTIL_SUPPLY+mask.png" />
 		<image file="FAI_UTIL_SUPPLY.png" />
+		<image file="FAI_SHIP_SWEEP+mask.png" />
+		<image file="FAI_SHIP_SWEEP.png" />
+		<image file="FAI_TANK_SWEEP+mask.png" />
+		<image file="FAI_TANK_SWEEP.png" />
 	</atlas>
 </resources>

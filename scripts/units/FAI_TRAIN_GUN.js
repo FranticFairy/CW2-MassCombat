@@ -21,6 +21,15 @@ var Constructor = function()
         unit.loadSprite("FAI_TRAIN_GUN", false);
         unit.loadSprite("FAI_TRAIN_GUN+mask", true);
     };
+    this.canAttackStealthedUnit = function(attacker, defender) 
+    {
+        var defenderID = defender.getUnitID()
+        if (defenderID != "FAI_SHIP_SUBMARINE")
+        {
+            return true;
+        }
+        return false;
+    };
     this.doWalkingAnimation = function(action)
     {
         var unit = action.getTargetUnit();
