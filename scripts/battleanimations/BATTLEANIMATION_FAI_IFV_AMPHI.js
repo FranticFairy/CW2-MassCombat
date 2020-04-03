@@ -6,14 +6,28 @@ var Constructor = function()
     };
 
     this.loadStandingAnimation = function(sprite, unit, defender, weapon)
-    {        
-        var terrainType = unit.getTerrain().getTerrainID();
+    {       
+        var player = unit.getOwner();
+        var armyName = player.getArmy().toLowerCase();
+        var identifier = "";
+        if (armyName === "ge" || armyName === "yc" || armyName === "bh") {
+            identifier = "+1";
+        } else if (armyName === "ma" || armyName === "bg" || armyName === "ac") {
+            identifier = "+2";
+        }
+
+        var terrainType = "";
+        var terrain = unit.getTerrain();
+        if(terrain != null) {
+            terrainType = terrain.getTerrainID();
+        }
+         
         if(terrainType == "MARSH" || terrainType == "RIVER" || terrainType == "DESERT_TRY_RIVER") {
-            sprite.loadSprite("FAI_IFV_AMPHI_WATER",  false, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
-            sprite.loadSprite("FAI_IFV_AMPHI_WATER+mask",  true, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
+            sprite.loadSprite("FAI_IFV_AMPHI_WATER" + identifier,  false, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
+            sprite.loadSprite("FAI_IFV_AMPHI_WATER" + identifier + "+mask",  true, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
         } else {
-            sprite.loadSprite("FAI_IFV_AMPHI",  false, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
-            sprite.loadSprite("FAI_IFV_AMPHI+mask",  true, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
+            sprite.loadSprite("FAI_IFV_AMPHI" + identifier,  false, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
+            sprite.loadSprite("FAI_IFV_AMPHI" + identifier + "+mask",  true, BATTLEANIMATION_FAI_IFV_AMPHI.getMaxUnitCount(), Qt.point(-5, 5));
         }
     };
 

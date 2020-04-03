@@ -1,7 +1,7 @@
 
 RIVER.loadBaseSprite = function (terrain) {
-    var surroundings = terrain.getSurroundings("RIVER,BRIDGE,RAILBRIDGE,SEA", false, false, GameEnums.Directions_All);
-    var surroundingsDirect = terrain.getSurroundings("RIVER,RAILBRIDGE,BRIDGE,SEA", false, false, GameEnums.Directions_Direct);
+    var surroundings = terrain.getSurroundings("RIVER,BRIDGE,RAILBRIDGE,SEA,FORD", false, false, GameEnums.Directions_All);
+    var surroundingsDirect = terrain.getSurroundings("RIVER,RAILBRIDGE,BRIDGE,SEA,FORD", false, false, GameEnums.Directions_Direct);
     var surroundingsSea = terrain.getSurroundings("SEA", true, false, GameEnums.Directions_All);
     //
 

@@ -121,7 +121,7 @@ var Constructor = function () {
         return "";
     };
     this.getDescription = function () {
-        return qsTr("Immobile but dangerous, Seamines explode and deal 4 damage to any enemy ship that gets too close. They're permanently stealthed...");
+        return qsTr("Immobile but dangerous, Seamines deal 4 damage to any enemy ship that comes in contact with it. They're permanently stealthed...");
     };
     this.getUnitType = function () {
         return GameEnums.UnitType_Naval;

@@ -7,8 +7,19 @@ var Constructor = function()
 
     this.loadStandingAnimation = function(sprite, unit, defender, weapon)
     {
-        sprite.loadSprite("FAI_PLANE_FIGHTER",  false, BATTLEANIMATION_FAI_PLANE_FIGHTER.getMaxUnitCount(), Qt.point(-5, 35));
-        sprite.loadSprite("FAI_PLANE_FIGHTER+mask",  true, BATTLEANIMATION_FAI_PLANE_FIGHTER.getMaxUnitCount(), Qt.point(-5, 35));
+        var player = unit.getOwner();
+        var armyName = player.getArmy().toLowerCase();
+        var identifier = "";
+        if (armyName === "ge" || armyName === "yc" || armyName === "dm") {
+            identifier = "+1";
+        } else if (armyName === "bh" || armyName === "ac") {
+            identifier = "+2";
+        } else if (armyName === "ma" || armyName === "bg") {
+            identifier = "+3";
+        }
+
+        sprite.loadSprite("FAI_PLANE_FIGHTER" + identifier,  false, BATTLEANIMATION_FAI_PLANE_FIGHTER.getMaxUnitCount(), Qt.point(-5, 35));
+        sprite.loadSprite("FAI_PLANE_FIGHTER" + identifier + "+mask",  true, BATTLEANIMATION_FAI_PLANE_FIGHTER.getMaxUnitCount(), Qt.point(-5, 35));
     };
 
     this.loadFireAnimation = function(sprite, unit, defender, weapon)

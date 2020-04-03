@@ -7,8 +7,21 @@ var Constructor = function()
 
     this.loadStandingAnimation = function(sprite, unit, defender, weapon)
     {
-        sprite.loadSprite("FAI_TANK_BATTLE",  false, BATTLEANIMATION_FAI_TANK_BATTLE.getMaxUnitCount(), Qt.point(-5, 5));
-        sprite.loadSprite("FAI_TANK_BATTLE+mask",  true, BATTLEANIMATION_FAI_TANK_BATTLE.getMaxUnitCount(), Qt.point(-5, 5));
+        var player = unit.getOwner();
+        var armyName = player.getArmy().toLowerCase();
+        var identifier = "";
+        if (armyName === "ge" || armyName === "ma") {
+            identifier = "+1";
+        } else if (armyName === "yc" || armyName === "bh") {
+            identifier = "+2";
+        } else if (armyName === "bg" || armyName === "dm") {
+            identifier = "+3";
+        } else if (armyName === "ac" || armyName === "bd") {
+            identifier = "+4";
+        }
+
+        sprite.loadSprite("FAI_TANK_BATTLE" + identifier,  false, BATTLEANIMATION_FAI_TANK_BATTLE.getMaxUnitCount(), Qt.point(-5, 5));
+        sprite.loadSprite("FAI_TANK_BATTLE" + identifier + "+mask",  true, BATTLEANIMATION_FAI_TANK_BATTLE.getMaxUnitCount(), Qt.point(-5, 5));
     };
 
     this.loadFireAnimation = function(sprite, unit, defender, weapon)

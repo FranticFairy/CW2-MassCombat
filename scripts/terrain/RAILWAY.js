@@ -31,7 +31,7 @@ var Constructor = function()
     };
     this.loadBaseSprite = function(terrain)
     {
-        var surroundings = terrain.getSurroundings("RAILWAY,RAILCROSS,RAILBRIDGE,STATION",
+        var surroundings = terrain.getSurroundings("RAILWAY,RAILCROSS,RAILBRIDGE,STATION,TELEPORTTILE",
                                                    false, false, GameEnums.Directions_Direct, true, true);
         terrain.loadBaseSprite("railway" + surroundings);
     };

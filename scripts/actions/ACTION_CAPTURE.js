@@ -84,17 +84,7 @@ var Constructor = function () {
             var captureAnimation = GameAnimationFactory.createGameAnimationCapture(x, y, capturePoints, ACTION_CAPTURE.postAnimationUnit.getCapturePoints(), maxCapturePoints);
             captureAnimation.addBackgroundSprite("capture_background");
             var armyName = ACTION_CAPTURE.postAnimationUnit.getOwner().getArmy().toLowerCase();
-            // bh and bg have the same sprites
-            if (armyName === "bg") {
-                armyName = "bh"
-            }
-            if ((armyName !== "os") &&
-                (armyName !== "yc") &&
-                (armyName !== "ge") &&
-                (armyName !== "bm") &&
-                (armyName !== "bh")) {
-                armyName = "os";
-            }
+            armyName = "os";
             var color;
             if (building.getOwner() === null) {
                 color = "#FFFFFF";

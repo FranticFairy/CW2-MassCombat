@@ -70,6 +70,7 @@ var Constructor = function()
         if(unit.getFuel() < 0 && unit.getHidden() === false) {
             unit.setFuel(0);
         }
+        ACTION_PING.pingSeamine(unit, 3);
     };
     this.getBaseCost = function()
     {

@@ -15,9 +15,20 @@ var Constructor = function () {
 
             }
         }
+        if(unit.getUnitID() == "FAI_SHIP_SWEEP" || unit.getUnitID() == "FAI_SHIP_SUBMARINE") {
+            ACTION_PING.pingSeamine(unit, 3);
+        }
+        if(unit.getUnitID() == "FAI_TANK_SWEEP" || unit.getUnitID() == "FAI_SUPP_RECON" || unit.getUnitID() == "FAI_SUPP_GUERILLA") {
+            ACTION_PING.pingLandmine(unit, 3);
+        }
+        if(unit.getUnitID() == "FAI_SHIP_DESTROYER") {
+            ACTION_PING.pingSubmarine(unit, 3);
+        }
+        if(unit.getUnitID() == "FAI_PLANE_AEWC") {
+            ACTION_PING.pingPlane(unit, 15);
+        }
 
         ACTION_ENDMOVE.heightMagic(unit);
-        unit.setHasMoved(true);
     };
 
     this.heightMagic = function (unit) {

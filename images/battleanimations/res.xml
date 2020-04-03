@@ -16,26 +16,12 @@
 		<image file="FAI_GUN_ARTY.png" />
 		<image file="FAI_GUN_AT+mask.png" />
 		<image file="FAI_GUN_AT.png" />
-		<image file="FAI_HELI_GUNSHIP+mask.png" />
-		<image file="FAI_HELI_GUNSHIP.png" />
 		<image file="FAI_HELI_INF+mask.png" />
 		<image file="FAI_HELI_INF.png" />
-		<image file="FAI_HELI_VHC+mask.png" />
-		<image file="FAI_HELI_VHC.png" />
 		<image file="FAI_HOVERCRAFT+mask.png" />
 		<image file="FAI_HOVERCRAFT.png" />
 		<image file="FAI_HOVER_HEAVY+mask.png" />
 		<image file="FAI_HOVER_HEAVY.png" />
-		<image file="FAI_IFV+mask.png" />
-		<image file="FAI_IFV.png" />
-		<image file="FAI_IFV_AMPHI+mask.png" />
-		<image file="FAI_IFV_AMPHI.png" />
-		<image file="FAI_IFV_AMPHI_WATER+mask.png" />
-		<image file="FAI_IFV_AMPHI_WATER.png" />
-		<image file="FAI_IFV_HEAVY+mask.png" />
-		<image file="FAI_IFV_HEAVY.png" />
-		<image file="FAI_PLANE_FIGHTER+mask.png" />
-		<image file="FAI_PLANE_FIGHTER.png" />
 		<image file="FAI_LAUNCHER_ASM+mask.png" />
 		<image file="FAI_LAUNCHER_ASM.png" />
 		<image file="FAI_LAUNCHER_RKT+mask.png" />
@@ -50,20 +36,18 @@
 		<image file="FAI_OTH_OGRE.png" />
 		<image file="FAI_OTH_SEAMINE+mask.png" />
 		<image file="FAI_OTH_SEAMINE.png" />
+		<image file="FAI_OTH_LANDMINE+mask.png" />
+		<image file="FAI_OTH_LANDMINE.png" />
 		<image file="FAI_PLANE_AEWC+mask.png" />
 		<image file="FAI_PLANE_AEWC.png" />
 		<image file="FAI_PLANE_BOMBER+mask.png" />
 		<image file="FAI_PLANE_BOMBER.png" />
-		<image file="FAI_PLANE_NAVJET+mask.png" />
-		<image file="FAI_PLANE_NAVJET.png" />
 		<image file="FAI_PLANE_SEAPLANE+mask.png" />
 		<image file="FAI_PLANE_SEAPLANE.png" />
 		<image file="FAI_PLANE_STEALTHBOMBER+mask.png" />
 		<image file="FAI_PLANE_STEALTHBOMBER.png" />
 		<image file="FAI_PLANE_STEALTHFIGHTER+mask.png" />
 		<image file="FAI_PLANE_STEALTHFIGHTER.png" />
-		<image file="FAI_PLANE_TANKBUSTER+mask.png" />
-		<image file="FAI_PLANE_TANKBUSTER.png" />
 		<image file="FAI_PLANE_TRANS+mask.png" />
 		<image file="FAI_PLANE_TRANS.png" />
 		<image file="FAI_SCREW_TRANSPORT+mask.png" />
@@ -98,14 +82,8 @@
 		<image file="FAI_SUPP_SPAA.png" />
 		<image file="FAI_SUPP_SPARTY+mask.png" />
 		<image file="FAI_SUPP_SPARTY.png" />
-		<image file="FAI_TANK_BATTLE+mask.png" />
-		<image file="FAI_TANK_BATTLE.png" />
-		<image file="FAI_TANK_HEAVY+mask.png" />
-		<image file="FAI_TANK_HEAVY.png" />
 		<image file="FAI_TANK_HOVER+mask.png" />
 		<image file="FAI_TANK_HOVER.png" />
-		<image file="FAI_TANK_LIGHT+mask.png" />
-		<image file="FAI_TANK_LIGHT.png" />
 		<image file="FAI_TANK_MECH+mask.png" />
 		<image file="FAI_TANK_MECH.png" />
 		<image file="FAI_TRAIN_ARMOR+mask.png" />
@@ -122,8 +100,6 @@
 		<image file="FAI_HOVER_TRANS.png" />
 		<image file="FAI_SHIP_TRANS+mask.png" />
 		<image file="FAI_SHIP_TRANS.png" />
-		<image file="FAI_TRANS_HALFT+mask.png" />
-		<image file="FAI_TRANS_HALFT.png" />
 		<image file="FAI_TRANS_SCREW+mask.png" />
 		<image file="FAI_TRANS_SCREW.png" />
 		<image file="FAI_TRANS_TRUCK+mask.png" />
@@ -148,5 +124,119 @@
 		<image file="FAI_SHIP_SWEEP.png" />
 		<image file="FAI_TANK_SWEEP+mask.png" />
 		<image file="FAI_TANK_SWEEP.png" />
+		
+		<image file="FAI_TANK_LIGHT+mask.png" />
+		<image file="FAI_TANK_LIGHT.png" />
+		<image file="FAI_TANK_LIGHT+1+mask.png" />
+		<image file="FAI_TANK_LIGHT+1.png" />
+		<image file="FAI_TANK_LIGHT+2+mask.png" />
+		<image file="FAI_TANK_LIGHT+2.png" />
+		<image file="FAI_TANK_LIGHT+3+mask.png" />
+		<image file="FAI_TANK_LIGHT+3.png" />
+		<image file="FAI_TANK_LIGHT+4+mask.png" />
+		<image file="FAI_TANK_LIGHT+4.png" />
+		<image file="FAI_TANK_LIGHT+5+mask.png" />
+		<image file="FAI_TANK_LIGHT+5.png" />
+		
+		<image file="FAI_TANK_BATTLE+mask.png" />
+		<image file="FAI_TANK_BATTLE.png" />
+		<image file="FAI_TANK_BATTLE+1+mask.png" />
+		<image file="FAI_TANK_BATTLE+1.png" />
+		<image file="FAI_TANK_BATTLE+2+mask.png" />
+		<image file="FAI_TANK_BATTLE+2.png" />
+		<image file="FAI_TANK_BATTLE+3+mask.png" />
+		<image file="FAI_TANK_BATTLE+3.png" />
+		<image file="FAI_TANK_BATTLE+4+mask.png" />
+		<image file="FAI_TANK_BATTLE+4.png" />
+		
+		<image file="FAI_TANK_HEAVY+mask.png" />
+		<image file="FAI_TANK_HEAVY.png" />
+		<image file="FAI_TANK_HEAVY+1+mask.png" />
+		<image file="FAI_TANK_HEAVY+1.png" />
+		<image file="FAI_TANK_HEAVY+2+mask.png" />
+		<image file="FAI_TANK_HEAVY+2.png" />
+		<image file="FAI_TANK_HEAVY+3+mask.png" />
+		<image file="FAI_TANK_HEAVY+3.png" />
+		
+		<image file="FAI_TRANS_HALFT+mask.png" />
+		<image file="FAI_TRANS_HALFT.png" />
+		<image file="FAI_TRANS_HALFT+1+mask.png" />
+		<image file="FAI_TRANS_HALFT+1.png" />
+		<image file="FAI_TRANS_HALFT+2+mask.png" />
+		<image file="FAI_TRANS_HALFT+2.png" />
+		<image file="FAI_TRANS_HALFT+3+mask.png" />
+		<image file="FAI_TRANS_HALFT+3.png" />
+		<image file="FAI_TRANS_HALFT+4+mask.png" />
+		<image file="FAI_TRANS_HALFT+4.png" />
+		
+		<image file="FAI_IFV_AMPHI+mask.png" />
+		<image file="FAI_IFV_AMPHI.png" />
+		<image file="FAI_IFV_AMPHI+1+mask.png" />
+		<image file="FAI_IFV_AMPHI+1.png" />
+		<image file="FAI_IFV_AMPHI+2+mask.png" />
+		<image file="FAI_IFV_AMPHI+2.png" />
+		
+		<image file="FAI_IFV_AMPHI_WATER+mask.png" />
+		<image file="FAI_IFV_AMPHI_WATER.png" />
+		<image file="FAI_IFV_AMPHI_WATER+1+mask.png" />
+		<image file="FAI_IFV_AMPHI_WATER+1.png" />
+		<image file="FAI_IFV_AMPHI_WATER+2+mask.png" />
+		<image file="FAI_IFV_AMPHI_WATER+2.png" />
+		
+		<image file="FAI_IFV+mask.png" />
+		<image file="FAI_IFV.png" />
+		<image file="FAI_IFV+1+mask.png" />
+		<image file="FAI_IFV+1.png" />
+		<image file="FAI_IFV+2+mask.png" />
+		<image file="FAI_IFV+2.png" />
+		<image file="FAI_IFV+3+mask.png" />
+		<image file="FAI_IFV+3.png" />
+		
+		<image file="FAI_IFV_HEAVY+mask.png" />
+		<image file="FAI_IFV_HEAVY.png" />
+		<image file="FAI_IFV_HEAVY+1+mask.png" />
+		<image file="FAI_IFV_HEAVY+1.png" />
+		
+		<image file="FAI_HELI_GUNSHIP+mask.png" />
+		<image file="FAI_HELI_GUNSHIP.png" />
+		<image file="FAI_HELI_GUNSHIP+1+mask.png" />
+		<image file="FAI_HELI_GUNSHIP+1.png" />
+		<image file="FAI_HELI_GUNSHIP+2+mask.png" />
+		<image file="FAI_HELI_GUNSHIP+2.png" />
+		<image file="FAI_HELI_GUNSHIP+3+mask.png" />
+		<image file="FAI_HELI_GUNSHIP+3.png" />
+		<image file="FAI_HELI_GUNSHIP+4+mask.png" />
+		<image file="FAI_HELI_GUNSHIP+4.png" />
+		
+		<image file="FAI_HELI_VHC+mask.png" />
+		<image file="FAI_HELI_VHC.png" />
+		<image file="FAI_HELI_VHC+1+mask.png" />
+		<image file="FAI_HELI_VHC+1.png" />
+		<image file="FAI_HELI_VHC+2+mask.png" />
+		<image file="FAI_HELI_VHC+2.png" />
+		
+		<image file="FAI_PLANE_FIGHTER+mask.png" />
+		<image file="FAI_PLANE_FIGHTER.png" />
+		<image file="FAI_PLANE_FIGHTER+1+mask.png" />
+		<image file="FAI_PLANE_FIGHTER+1.png" />
+		<image file="FAI_PLANE_FIGHTER+2+mask.png" />
+		<image file="FAI_PLANE_FIGHTER+2.png" />
+		<image file="FAI_PLANE_FIGHTER+3+mask.png" />
+		<image file="FAI_PLANE_FIGHTER+3.png" />
+		
+		<image file="FAI_PLANE_NAVJET+mask.png" />
+		<image file="FAI_PLANE_NAVJET.png" />
+		<image file="FAI_PLANE_NAVJET+1+mask.png" />
+		<image file="FAI_PLANE_NAVJET+1.png" />
+		<image file="FAI_PLANE_NAVJET+2+mask.png" />
+		<image file="FAI_PLANE_NAVJET+2.png" />
+		
+		<image file="FAI_PLANE_TANKBUSTER+mask.png" />
+		<image file="FAI_PLANE_TANKBUSTER.png" />
+		<image file="FAI_PLANE_TANKBUSTER+1+mask.png" />
+		<image file="FAI_PLANE_TANKBUSTER+1.png" />
+		<image file="FAI_PLANE_TANKBUSTER+2+mask.png" />
+		<image file="FAI_PLANE_TANKBUSTER+2.png" />
+		
 	</atlas>
 </resources>

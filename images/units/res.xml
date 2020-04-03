@@ -90,6 +90,8 @@
 		<image file="FAI_OTH_OGRE.png" />
 		<image file="FAI_OTH_SEAMINE+mask.png" />
 		<image file="FAI_OTH_SEAMINE.png" />
+		<image file="FAI_OTH_LANDMINE+mask.png" />
+		<image file="FAI_OTH_LANDMINE.png" />
 		<image file="FAI_PLANE_AEWC+mask.png" />
 		<image file="FAI_PLANE_AEWC.png" />
 		<image file="FAI_PLANE_BOMBER+mask.png" />
@@ -186,5 +188,8 @@
 		<image file="FAI_SHIP_SWEEP.png" />
 		<image file="FAI_TANK_SWEEP+mask.png" />
 		<image file="FAI_TANK_SWEEP.png" />
+		<image file="FAI_OTH_HORROR+mask.png" />
+		<image file="FAI_OTH_HORROR.png" />
+		
 	</atlas>
 </resources>

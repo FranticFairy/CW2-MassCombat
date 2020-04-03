@@ -7,8 +7,17 @@ var Constructor = function()
 
     this.loadStandingAnimation = function(sprite, unit, defender, weapon)
     {
-        sprite.loadSprite("FAI_HELI_VHC",  false, BATTLEANIMATION_FAI_HELI_VHC.getMaxUnitCount(), Qt.point(-5, 35));
-        sprite.loadSprite("FAI_HELI_VHC+mask",  true, BATTLEANIMATION_FAI_HELI_VHC.getMaxUnitCount(), Qt.point(-5, 35));
+        var player = unit.getOwner();
+        var armyName = player.getArmy().toLowerCase();
+        var identifier = "";
+        if (armyName === "ge" || armyName === "yc" || armyName === "bh" || armyName === "dm") {
+            identifier = "+1";
+        } else if (armyName === "ma" || armyName === "bg") {
+            identifier = "+2";
+        }
+
+        sprite.loadSprite("FAI_HELI_VHC" + identifier,  false, BATTLEANIMATION_FAI_HELI_VHC.getMaxUnitCount(), Qt.point(-5, 35));
+        sprite.loadSprite("FAI_HELI_VHC" + identifier + "+mask",  true, BATTLEANIMATION_FAI_HELI_VHC.getMaxUnitCount(), Qt.point(-5, 35));
     };
 
     this.loadFireAnimation = function(sprite, unit, defender, weapon)

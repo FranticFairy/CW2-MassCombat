@@ -6,9 +6,22 @@ var Constructor = function()
     };
 
     this.loadStandingAnimation = function(sprite, unit, defender, weapon)
-    {
-        sprite.loadSprite("FAI_TRANS_HALFT",  false, BATTLEANIMATION_FAI_TRANS_HALFT.getMaxUnitCount(), Qt.point(-5, 5));
-        sprite.loadSprite("FAI_TRANS_HALFT+mask",  true, BATTLEANIMATION_FAI_TRANS_HALFT.getMaxUnitCount(), Qt.point(-5, 5));
+    {       
+        var player = unit.getOwner();
+        var armyName = player.getArmy().toLowerCase();
+        var identifier = "";
+        if (armyName === "ge" || armyName === "yc") {
+            identifier = "+1";
+        } else if (armyName === "ma" || armyName === "bg") {
+            identifier = "+2";
+        } else if (armyName === "ac" || armyName === "bd") {
+            identifier = "+3";
+        } else if (armyName === "dm") {
+            identifier = "+4";
+        }
+
+        sprite.loadSprite("FAI_TRANS_HALFT" + identifier,  false, BATTLEANIMATION_FAI_TRANS_HALFT.getMaxUnitCount(), Qt.point(-5, 5));
+        sprite.loadSprite("FAI_TRANS_HALFT" + identifier + "+mask",  true, BATTLEANIMATION_FAI_TRANS_HALFT.getMaxUnitCount(), Qt.point(-5, 5));
     };
 
     this.loadFireAnimation = function(sprite, unit, defender, weapon)

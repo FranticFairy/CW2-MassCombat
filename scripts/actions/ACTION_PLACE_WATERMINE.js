@@ -9,7 +9,10 @@ var Constructor = function()
 
         if ((unit.getHasMoved() === true) ||
             (unit.getAmmo2() === 0) ||
-            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0))
+            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0)||
+            (map.getTerrain(actionTargetField.x,actionTargetField.y).getID() == "BEACH") ||
+            (unit.getOwner().getFunds() < 2000)
+            )
         {
             return false;
         }
@@ -121,6 +124,7 @@ var Constructor = function()
             unit.setHasMoved(true);
         }
         player.buildedUnit(unit);
+        player.addFunds(-2000);
         audio.playSound("unload.wav");
         ACTION_PLACE_WATERMINE.postAnimationMinePosX = -1;
         ACTION_PLACE_WATERMINE.postAnimationMinePosY = -1;

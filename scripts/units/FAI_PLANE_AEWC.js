@@ -36,6 +36,7 @@ var Constructor = function()
             fuelCosts = 0;
         }
         unit.setFuel(unit.getFuel() - fuelCosts);
+        ACTION_PING.pingPlane(unit, 15);
     };
     this.createExplosionAnimation = function(x, y, unit)
     {

@@ -21,7 +21,7 @@ var Constructor = function()
     };
     this.loadBaseSprite = function(terrain, currentTerrainID)
     {
-        var surroundings = terrain.getSurroundings("RIVER,SEA,ROUGH_SEA,REAF,BEACH,FOG,BRIDGE", false, false, GameEnums.Directions_Direct, false);
+        var surroundings = terrain.getSurroundings("RIVER,SEA,ROUGH_SEA,REAF,BEACH,FOG,BRIDGE,FORD", false, false, GameEnums.Directions_Direct, false);
         terrain.loadBaseSprite("railbridge" + surroundings);
     };
     this.useTerrainAsBaseTerrain = function()

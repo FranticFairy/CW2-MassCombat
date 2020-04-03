@@ -40,6 +40,7 @@ var Constructor = function () {
         ["TEMPORARY_AIRPORT", 1],
         ["FACTORY", 1],
         ["LABOR", 1],
+        ["FORD", 3],
         ["MINE", 2],
         ["PIPESTATION", 1],
         ["RADAR", 1],
@@ -49,27 +50,22 @@ var Constructor = function () {
         ["TOWN", 1]
     ];
 
-    this.getMovementpoints = function (terrain, unit) {
+    this.getMovementpoints = function (terrain, unit, currentterrain) {
         var id = terrain.getID();
         if ((id === "ZGATE_E_W" || id === "ZGATE_N_S") &&
             (unit !== null) &&
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
         }
-        if(map !== null) {
-            var uT = map.getTerrain(unit.getX(), unit.getY());
-            if(uT !== null) {
-                var unitTerrain = uT.getID();
-                if ((id === "MOUNTAIN")) {
-                    if(unitTerrain === "MOUNTAIN") {
-                        return 2;
-                    }
-                }
-                if ((id === "ELEVATED")) {
-                    if(unitTerrain === "ELEVATED") {
-                        return 2;
-                    }
-                }
+        var unitTerrain = currentterrain.getID();
+        if ((id === "MOUNTAIN")) {
+            if(unitTerrain === "MOUNTAIN") {
+                return 2;
+            }
+        }
+        if ((id === "ELEVATED")) {
+            if(unitTerrain === "ELEVATED") {
+                return 2;
             }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_LIGHT_WHEEL.movementpointsTable);

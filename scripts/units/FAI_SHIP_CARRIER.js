@@ -4,10 +4,15 @@ var Constructor = function()
     {
         unit.setMinRange(1);
         unit.setMaxRange(1);
-        unit.setWeapon2ID("WEP_FAI_AAGUN");
 
-        unit.setAmmo2(10);
-        unit.setMaxAmmo2(10);
+        unit.setAmmo1(10);
+        unit.setMaxAmmo1(10);
+        unit.setWeapon1ID("WEP_FAI_AAGUN");
+
+        unit.setAmmo2(1);
+        unit.setMaxAmmo2(1);
+        unit.setWeapon2ID("");
+
         unit.setFuel(70);
         unit.setMaxFuel(70);
         unit.setBaseMovementPoints(4);
@@ -90,6 +95,11 @@ var Constructor = function()
     {
         return true;
     };
+    this.getActions = function()
+    {
+        // returns a string id list of the actions this unit can perform
+        return "ACTION_FIRE,ACTION_BUILD_FIGHTER,ACTION_BUILD_NAVJET,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT,ACTION_CO_UNIT_0,ACTION_CO_UNIT_1";
+    },
     this.getLoadingPlace = function()
     {
         return 2;

@@ -4,7 +4,7 @@ var Constructor = function()
     {
         unit.setMinRange(1);
         unit.setMaxRange(1);
-        unit.setWeapon1ID("WEP_FAI_TORPEDO");
+        unit.setWeapon1ID("WEP_FAI_TORPEDO_LIGHT");
         unit.setAmmo1(2);
         unit.setMaxAmmo1(2);
         

@@ -70,6 +70,23 @@
 		<image file="bridge+W.png" />
 		<image file="bridge.png" />
 		
+		<image file="ford+E+S+W.png" />
+		<image file="ford+E+S.png" />
+		<image file="ford+E+W.png" />
+		<image file="ford+E.png" />
+		<image file="ford+N+E+S+W.png" />
+		<image file="ford+N+E+S.png" />
+		<image file="ford+N+E+W.png" />
+		<image file="ford+N+E.png" />
+		<image file="ford+N+S+W.png" />
+		<image file="ford+N+S.png" />
+		<image file="ford+N+W.png" />
+		<image file="ford+N.png" />
+		<image file="ford+S+W.png" />
+		<image file="ford+S.png" />
+		<image file="ford+W.png" />
+		<image file="ford.png" />
+		
 		<image file="desert.png" />
 		
 		<image file="desert_destroyedweld+E+W.png" />

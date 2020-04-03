@@ -39,11 +39,6 @@ var Constructor = function()
     {
         return "MOVE_FAI_OGRE";
     };
-    this.getActions = function()
-    {
-        // returns a string id list of the actions this unit can perform
-        return "ACTION_FIRE,ACTION_LOAD,ACTION_UNLOAD,ACTION_HOELLIUM_WAIT,ACTION_CO_UNIT_0,ACTION_CO_UNIT_1";
-    };
     this.getBaseCost = function()
     {
         return 45000;
@@ -58,7 +53,7 @@ var Constructor = function()
     };
     this.getDescription = function()
     {
-        return qsTr("The most feared weapon of all. A behemoth of a tank, armed with Nuclear Cannons and Lasers, capable of traversing most terrains driven by a blood-thirsty AI. The OGRE is the ultimate unit capable of annihilating any lesser foe. The OGRE.");
+        return qsTr("The most feared weapon of all. A behemoth of a tank, armed with Nuclear Cannons and Lasers, capable of traversing most terrains driven by a blood-thirsty AI. The ultimate unit capable of annihilating any lesser foe. The OGRE.");
     };
     this.getUnitType = function()
     {

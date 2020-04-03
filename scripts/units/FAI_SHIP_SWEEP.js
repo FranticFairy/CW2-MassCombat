@@ -45,6 +45,7 @@ var Constructor = function()
         if(unit.getFuel() < 0) {
             unit.setFuel(0);
         }
+        ACTION_PING.pingSeamine(unit, 3);
     };
     this.createExplosionAnimation = function(x, y, unit)
     {

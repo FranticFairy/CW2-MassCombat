@@ -65,7 +65,8 @@ var Constructor = function () {
         ["SILO", 1],
         ["SILO_ROCKET", 1],
         ["TOWER", 1],
-        ["TOWN", 1]
+        ["TOWN", 1],
+        ["FORD", 1]
     ];
 
     this.getMovementpoints = function (terrain, unit) {
