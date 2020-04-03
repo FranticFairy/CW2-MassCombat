@@ -9,7 +9,7 @@ var Constructor = function()
 
         if ((unit.getHasMoved() === true) ||
             (unit.getAmmo2() === 0) ||
-            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0)||
+            (unit.getBaseMovementCosts(actionTargetField.x, actionTargetField.y) <= 0) ||
             (unit.getOwner().getFunds() < 2000)
             )
         {
@@ -18,7 +18,7 @@ var Constructor = function()
         if ((actionTargetField.x === targetField.x) && (actionTargetField.y === targetField.y) ||
                 (action.getMovementTarget() === null))
         {
-            if (ACTION_PLACE_WATERMINE.getMineFields(action).length > 0)
+            if (ACTION_PLACE_LANDMINE.getMineFields(action).length > 0)
             {
                 return true;
             }
@@ -46,7 +46,8 @@ var Constructor = function()
                 if ((Global[unit.getMovementType()].getMovementpoints(terrain, unit) > 0) &&
                     (defUnit === null))
                 {
-                    if(terrain.getTerrainID() != "BEACH") {
+                    var terrainID = terrain.getTerrainID();
+                    if(terrainID != "FORD" && terrainID != "STREET" && terrainID != "BRIDGE" && terrainID != "RAILBRIDGE") {
                         ret.push(targetFields[i]);
                     }
                 }
@@ -57,11 +58,11 @@ var Constructor = function()
 
     this.getActionText = function()
     {
-        return qsTr("Place Seamine");
+        return qsTr("Place Landmine");
     };
     this.getIcon = function()
     {
-        return "FAI_OTH_SEAMINE";
+        return "FAI_OTH_LANDMINE";
     };
     this.isFinalStep = function(action)
     {
@@ -85,7 +86,7 @@ var Constructor = function()
         var unit = action.getTargetUnit();
         var actionTargetField = action.getActionTarget();
         data.setColor("#C800FF00");
-        var fields = ACTION_PLACE_WATERMINE.getMineFields(action);
+        var fields = ACTION_PLACE_LANDMINE.getMineFields(action);
         for (var i3 = 0; i3 < fields.length; i3++)
         {
             data.addPoint(Qt.point(fields[i3].x, fields[i3].y));
@@ -99,7 +100,7 @@ var Constructor = function()
         // we need to move the unit to the target position
         var unit = action.getTargetUnit();
         var animation = Global[unit.getUnitID()].doWalkingAnimation(action);
-        animation.setEndOfAnimationCall("ACTION_PLACE_WATERMINE", "performPostAnimation");
+        animation.setEndOfAnimationCall("FAI_OTH_LANDMINE", "performPostAnimation");
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
@@ -108,16 +109,16 @@ var Constructor = function()
         action.startReading();
         var x = action.readDataInt32();
         var y = action.readDataInt32();
-        ACTION_PLACE_WATERMINE.postAnimationMinePosX = x;
-        ACTION_PLACE_WATERMINE.postAnimationMinePosY = y;
+        ACTION_PLACE_LANDMINE.postAnimationMinePosX = x;
+        ACTION_PLACE_LANDMINE.postAnimationMinePosY = y;
     };
     this.performPostAnimation = function(postAnimation)
     {
         // unloading the units here :)
         var player = map.getCurrentPlayer();
-        var unit = map.spawnUnit(ACTION_PLACE_WATERMINE.postAnimationMinePosX,
-                                 ACTION_PLACE_WATERMINE.postAnimationMinePosY,
-                                 "FAI_OTH_SEAMINE", player);
+        var unit = map.spawnUnit(ACTION_PLACE_LANDMINE.postAnimationMinePosX,
+                                 ACTION_PLACE_LANDMINE.postAnimationMinePosY,
+                                 "FAI_OTH_LANDMINE", player);
         if (unit !== null)
         {
             // pay for the unit
@@ -127,10 +128,10 @@ var Constructor = function()
         player.buildedUnit(unit);
         player.addFunds(-2000);
         audio.playSound("unload.wav");
-        ACTION_PLACE_WATERMINE.postAnimationMinePosX = -1;
-        ACTION_PLACE_WATERMINE.postAnimationMinePosY = -1;
+        ACTION_PLACE_LANDMINE.postAnimationMinePosX = -1;
+        ACTION_PLACE_LANDMINE.postAnimationMinePosY = -1;
     };
 }
 
 Constructor.prototype = ACTION;
-var ACTION_PLACE_WATERMINE = new Constructor();
+var ACTION_PLACE_LANDMINE = new Constructor();

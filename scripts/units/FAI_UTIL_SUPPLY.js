@@ -2,6 +2,10 @@ var Constructor = function()
 {
     this.init = function(unit)
     {
+        unit.setWeapon2ID("WEP_FAI_MINE");
+        unit.setAmmo2(1);
+        unit.setMaxAmmo2(1);
+
         unit.setFuel(99);
         unit.setMaxFuel(99);
         unit.setBaseMovementPoints(4);
@@ -27,7 +31,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_SUPPORTALL_RATION,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
+        return "ACTION_SUPPORTALL_RATION,ACTION_PLACE_LANDMINE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.getMovementType = function()
     {

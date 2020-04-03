@@ -4,10 +4,14 @@ var Constructor = function()
     {
         unit.setMinRange(1);
         unit.setMaxRange(1);
-        unit.setWeapon2ID("WEP_FAI_MG_MMG");
+        unit.setWeapon1ID("WEP_FAI_MG_MMG");
 
-        unit.setAmmo2(10);
-        unit.setMaxAmmo2(10);
+        unit.setWeapon2ID("WEP_FAI_MINE");
+        unit.setAmmo2(1);
+        unit.setMaxAmmo2(1);
+
+        unit.setAmmo1(10);
+        unit.setMaxAmmo1(10);
         unit.setFuel(99);
         unit.setMaxFuel(99);
         unit.setBaseMovementPoints(5);
@@ -45,7 +49,7 @@ var Constructor = function()
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
-        return "ACTION_CAPTURE_GUERILLA,ACTION_FIRE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
+        return "ACTION_FIRE,ACTION_CAPTURE_GUERILLA,ACTION_PLACE_LANDMINE,ACTION_JOIN,ACTION_LOAD,ACTION_UNLOAD,ACTION_WAIT";
     };
     this.canMoveAndFire = function()
     {

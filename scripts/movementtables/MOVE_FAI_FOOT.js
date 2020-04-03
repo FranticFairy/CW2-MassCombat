@@ -60,15 +60,17 @@ var Constructor = function () {
             (unit.getOwner().isAlly(terrain.getBuilding().getOwner()))) {
             return 1;
         }
-        var unitTerrain = currentTerrain.getID();
-        if ((id === "MOUNTAIN")) {
-            if(unitTerrain === "MOUNTAIN") {
-                return 1;
+        if(currentTerrain != null) {
+            var unitTerrain = currentTerrain.getID();
+            if ((id === "MOUNTAIN")) {
+                if(unitTerrain === "MOUNTAIN") {
+                    return 1;
+                }
             }
-        }
-        if ((id === "ELEVATED")) {
-            if(unitTerrain === "ELEVATED") {
-                return 1;
+            if ((id === "ELEVATED")) {
+                if(unitTerrain === "ELEVATED") {
+                    return 1;
+                }
             }
         }
         return MOVEMENTTABLE.getMovementpointsFromTable(terrain, MOVE_FAI_FOOT.movementpointsTable);
