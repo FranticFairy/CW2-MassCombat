@@ -100,7 +100,7 @@ var Constructor = function()
         // we need to move the unit to the target position
         var unit = action.getTargetUnit();
         var animation = Global[unit.getUnitID()].doWalkingAnimation(action);
-        animation.setEndOfAnimationCall("FAI_OTH_LANDMINE", "performPostAnimation");
+        animation.setEndOfAnimationCall("ACTION_PLACE_LANDMINE", "performPostAnimation");
         // move unit to target position
         unit.moveUnitAction(action);
         // disable unit commandments for this turn
@@ -127,7 +127,7 @@ var Constructor = function()
         }
         player.buildedUnit(unit);
         player.addFunds(-2000);
-        audio.playSound("unload.wav");
+        audio.playSound("mine-place.wav", -2, "mods/MassCombat/sounds/");
         ACTION_PLACE_LANDMINE.postAnimationMinePosX = -1;
         ACTION_PLACE_LANDMINE.postAnimationMinePosY = -1;
     };

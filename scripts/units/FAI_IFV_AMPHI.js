@@ -5,14 +5,14 @@ var Constructor = function()
         unit.setMinRange(1);
         unit.setMaxRange(1);
 
-        unit.setWeapon2ID("WEP_FAI_MG_HVYVMG");
+        unit.setWeapon2ID("WEP_FAI_AUTOCAN");
 
-        unit.setAmmo2(10);
-        unit.setMaxAmmo2(10);
+        unit.setAmmo2(7);
+        unit.setMaxAmmo2(7);
         unit.setFuel(99);
         unit.setMaxFuel(99);
         unit.setBaseMovementPoints(5);
-        unit.setVision(4)
+        unit.setVision(3)
     };
     // called for loading the main sprite
     this.loadSprites = function(unit)

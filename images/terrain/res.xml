@@ -337,6 +337,23 @@
 		<image file="riverending+W+NW.png" />
 		<image file="riverending+W.png" />
 		
+		<image file="fordextension+E+SE.png" />
+		<image file="fordextension+E.png" />
+		<image file="fordextension+N+NE+NW.png" />
+		<image file="fordextension+N+NE.png" />
+		<image file="fordextension+N+NW.png" />
+		<image file="fordextension+N.png" />
+		<image file="fordextension+NE+E+SE.png" />
+		<image file="fordextension+NE+E.png" />
+		<image file="fordextension+S+SW.png" />
+		<image file="fordextension+S.png" />
+		<image file="fordextension+SE+S+SW.png" />
+		<image file="fordextension+SE+S.png" />
+		<image file="fordextension+SW+W+NW.png" />
+		<image file="fordextension+SW+W.png" />
+		<image file="fordextension+W+NW.png" />
+		<image file="fordextension+W.png" />
+		
 		<image file="rough_sea.png" />
 		
 		<image file="ruin.png" />

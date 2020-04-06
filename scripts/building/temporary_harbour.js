@@ -24,7 +24,10 @@ var Constructor = function()
     {
         return qsTr("Temporary Harbour");
     };
-
+    this.getBaseTerrain = function(building)
+    {
+        return ["BEACH"];
+    };
     this.getActions = function()
     {
         // returns a string id list of the actions this building can perform

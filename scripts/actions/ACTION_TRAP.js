@@ -48,7 +48,7 @@ var Constructor = function () {
 
                 var animation2 = GameAnimationFactory.createAnimation(ACTION_TRAP.postAnimationTrapSignX, ACTION_TRAP.postAnimationTrapSignY);
                 animation2.addSprite("explosion+water", -map.getImageSize() / 2, -map.getImageSize(), 0, 1.5);
-                audio.playSound("explosion+water.wav");
+                animation.setSound("mine-explode.wav", -2, "mods/MassCombat/sounds/");
                 trappingUnit.killUnit();
                 map.getGameRecorder().destroyedUnit(trappingUnit.getOwner().getPlayerID());
             }
@@ -70,7 +70,7 @@ var Constructor = function () {
 
                 var animation2 = GameAnimationFactory.createAnimation(ACTION_TRAP.postAnimationTrapSignX, ACTION_TRAP.postAnimationTrapSignY);
                 animation2.addSprite("explosion+land", -map.getImageSize() / 2, -map.getImageSize(), 0, 1.5);
-                audio.playSound("explosion+land.wav");
+                animation.setSound("mine-explode.wav", -2, "mods/MassCombat/sounds/");
                 trappingUnit.killUnit();
                 map.getGameRecorder().destroyedUnit(trappingUnit.getOwner().getPlayerID());
             }

@@ -126,7 +126,7 @@ var Constructor = function()
         }
         player.buildedUnit(unit);
         player.addFunds(-2000);
-        audio.playSound("unload.wav");
+        audio.playSound("mine-place.wav", -2, "mods/MassCombat/sounds/");
         ACTION_PLACE_WATERMINE.postAnimationMinePosX = -1;
         ACTION_PLACE_WATERMINE.postAnimationMinePosY = -1;
     };

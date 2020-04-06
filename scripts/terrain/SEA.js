@@ -8,6 +8,43 @@ SEA.loadOverlaySprite = function (terrain) {
     var surroundingsSeaDirect = terrain.getSurroundings("SEA", true, false, GameEnums.Directions_Direct, false);
     var surroundingsRiver = terrain.getSurroundings("RIVER,HARBOUR,FORD", false, false, GameEnums.Directions_Direct, false, true);
     var surroundingsRiver2 = terrain.getSurroundings("RIVER,HARBOUR,FORD", false, false, GameEnums.Directions_All, false, true);
+    var surroundingsBridge = terrain.getSurroundings("BRIDGE",false,false, GameEnums.Directions_Direct, false, true);
+
+    if(map != null) {
+        if(surroundingsBridge.includes("+N")) {
+            var detectedTerrain = map.getTerrain(terrain.getX(), terrain.getY()-1);
+            if(detectedTerrain != null) {
+                if(detectedTerrain.getBaseTerrainID() != "SEA") {
+                    surroundingsRiver += "+N"
+                }
+            }
+        }
+        if(surroundingsBridge.includes("+E")) {
+            var detectedTerrain = map.getTerrain(terrain.getX()+1, terrain.getY());
+            if(detectedTerrain != null) {
+                if(detectedTerrain.getBaseTerrainID() != "SEA") {
+                    surroundingsRiver += "+E"
+                }
+            }
+        }
+        if(surroundingsBridge.includes("+S")) {
+            var detectedTerrain = map.getTerrain(terrain.getX(), terrain.getY()+1);
+            if(detectedTerrain != null) {
+                if(detectedTerrain.getBaseTerrainID() != "SEA") {
+                    surroundingsRiver += "+S"
+                }
+            }
+        }
+        if(surroundingsBridge.includes("+W")) {
+            var detectedTerrain = map.getTerrain(terrain.getX()-1, terrain.getY());
+            if(detectedTerrain != null) {
+                if(detectedTerrain.getBaseTerrainID() != "SEA") {
+                    surroundingsRiver += "+W"
+                }
+            }
+        }
+
+    }
     // load overlay north
     if ((surroundingsRiver.includes("+N"))) {
         var overlay = "riverending";

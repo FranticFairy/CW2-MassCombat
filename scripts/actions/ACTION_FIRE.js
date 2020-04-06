@@ -42,6 +42,7 @@ var Constructor = function()
                         {
                             if (unit.hasAmmo1() && unit.getWeapon1ID() !== "")
                             {
+                                GameConsole.print(Global[unit.getWeapon1ID()].getEnviromentDamage(defTerrain.getID()),1)
                                 if (Global[unit.getWeapon1ID()].getEnviromentDamage(defTerrain.getID()) > 0)
                                 {
                                     return true;
@@ -49,6 +50,7 @@ var Constructor = function()
                             }
                             if (unit.hasAmmo2() && unit.getWeapon2ID() !== "")
                             {
+                                GameConsole.print(Global[unit.getWeapon2ID()].getEnviromentDamage(defTerrain.getID()),1)
                                 if (Global[unit.getWeapon2ID()].getEnviromentDamage(defTerrain.getID()) > 0)
                                 {
                                     return true;
@@ -104,7 +106,7 @@ var Constructor = function()
             if (defender.getMinRange(Qt.point(defender.getX(), defender.getY())) === 1 && defenderWeapon !== "")
             {
                 var health = defender.getHp() - takenDamage / 10.0;
-                if (defender.getFirstStrike(defender.getPosition(), attacker) || defender.getUnitID() == "FAI_GUN_AT")
+                if (defender.getFirstStrike(defender.getPosition(), attacker))
                 {
                     health = defender.getHp();
                 }
@@ -339,8 +341,7 @@ var Constructor = function()
         // move unit to target position
         ACTION_FIRE.postAnimationUnit.moveUnitAction(action);
         // disable unit commandments for this turn
-		var unit = ACTION_FIRE.postAnimationUnit;
-		unit.setHasMoved(true);
+        ACTION_FIRE.postAnimationUnit.setHasMoved(true);
         action.startReading();
         // read action data
         ACTION_FIRE.postAnimationTargetX = action.readDataInt32();
