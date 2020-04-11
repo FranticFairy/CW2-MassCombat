@@ -26,6 +26,7 @@ var Constructor = function()
         if(unit.getFuel() < 0) {
             unit.setFuel(0);
         }
+        ACTION_SUPPORTALL_RATION.giveRation(unit);
     };
     this.canAttackStealthedUnit = function(attacker, defender) 
     {

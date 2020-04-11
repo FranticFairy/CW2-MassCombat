@@ -38,6 +38,7 @@ var Constructor = function()
         if(unit.getFuel() < 0) {
             unit.setFuel(0);
         }
+        UNIT.transporterRefilling(unit);
     };
     this.canAttackStealthedUnit = function(attacker, defender) 
     {

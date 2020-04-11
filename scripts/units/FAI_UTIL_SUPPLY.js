@@ -28,6 +28,10 @@ var Constructor = function()
         animation.setSound("truck.wav", -2, "mods/MassCombat/sounds/");
         return animation;
     };
+    this.startOfTurn = function(unit)
+    {
+        ACTION_SUPPORTALL_RATION.giveRation(unit);
+    };
     this.getActions = function()
     {
         // returns a string id list of the actions this unit can perform
